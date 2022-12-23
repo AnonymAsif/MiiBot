@@ -1,8 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "BDFeiv8NdfqGdDolj3Hx94XULmgqJ+aABGvHperKFmOmC2ajl6XhOKqfBtaCowVss6IM01gCqib0LVLrqKjDTw==",
+  "dgSpecHash": "P4uW0EgUsTQfquaWdOcfZPZHGG+pQQ3500Ykv8nNGbFs0WOYHLLZ1FNE9HHGke4uGD5jXOE+kmXiuWt2/tBSxA==",
   "success": true,
   "projectFilePath": "D:\\MiiBot\\MiiBot.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Byte\\.nuget\\packages\\discord.net\\3.8.1\\discord.net.3.8.1.nupkg.sha512",
+    "C:\\Users\\Byte\\.nuget\\packages\\discord.net.commands\\3.8.1\\discord.net.commands.3.8.1.nupkg.sha512",
+    "C:\\Users\\Byte\\.nuget\\packages\\discord.net.core\\3.8.1\\discord.net.core.3.8.1.nupkg.sha512",
+    "C:\\Users\\Byte\\.nuget\\packages\\discord.net.interactions\\3.8.1\\discord.net.interactions.3.8.1.nupkg.sha512",
+    "C:\\Users\\Byte\\.nuget\\packages\\discord.net.rest\\3.8.1\\discord.net.rest.3.8.1.nupkg.sha512",
+    "C:\\Users\\Byte\\.nuget\\packages\\discord.net.webhook\\3.8.1\\discord.net.webhook.3.8.1.nupkg.sha512",
+    "C:\\Users\\Byte\\.nuget\\packages\\discord.net.websocket\\3.8.1\\discord.net.websocket.3.8.1.nupkg.sha512",
+    "C:\\Users\\Byte\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Byte\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Byte\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
+    "C:\\Users\\Byte\\.nuget\\packages\\system.interactive.async\\5.0.0\\system.interactive.async.5.0.0.nupkg.sha512",
+    "C:\\Users\\Byte\\.nuget\\packages\\system.linq.async\\5.0.0\\system.linq.async.5.0.0.nupkg.sha512",
+    "C:\\Users\\Byte\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
+    "C:\\Users\\Byte\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }
