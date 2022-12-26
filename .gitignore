@@ -24,3 +24,15 @@ obj/Debug/net7.0/MiiBot.genruntimeconfig.cache
 obj/Debug/net7.0/MiiBot.pdb
 obj/Debug/net7.0/ref/MiiBot.dll
 obj/Debug/net7.0/refint/MiiBot.dll
+bin/Debug/net7.0/Discord.Net.Commands.dll
+bin/Debug/net7.0/Discord.Net.Core.dll
+bin/Debug/net7.0/Discord.Net.Interactions.dll
+bin/Debug/net7.0/Discord.Net.Rest.dll
+bin/Debug/net7.0/Discord.Net.Webhook.dll
+bin/Debug/net7.0/Discord.Net.WebSocket.dll
+bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+bin/Debug/net7.0/Newtonsoft.Json.dll
+bin/Debug/net7.0/System.Interactive.Async.dll
+bin/Debug/net7.0/System.Linq.Async.dll
+bin/Debug/net7.0/System.Reactive.dll
+obj/Debug/net7.0/MiiBot.csproj.CopyComplete
