@@ -11,6 +11,6 @@ public class Program
     {
         DiscordSocketClient _client = new DiscordSocketClient();
 
-        Console.WriteLine("Hello, Mii!");
+        Console.WriteLine("Hello, Me!");
     }
 }
