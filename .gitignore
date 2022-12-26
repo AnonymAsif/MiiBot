@@ -1,0 +1,13 @@
+MiiBot.csproj
+obj/MiiBot.csproj.nuget.dgspec.json
+obj/MiiBot.csproj.nuget.g.props
+obj/MiiBot.csproj.nuget.g.targets
+obj/project.assets.json
+obj/project.nuget.cache
+obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs
+obj/Debug/net7.0/MiiBot.AssemblyInfo.cs
+obj/Debug/net7.0/MiiBot.AssemblyInfoInputs.cache
+obj/Debug/net7.0/MiiBot.assets.cache
+obj/Debug/net7.0/MiiBot.csproj.AssemblyReference.cache
+obj/Debug/net7.0/MiiBot.GeneratedMSBuildEditorConfig.editorconfig
+obj/Debug/net7.0/MiiBot.GlobalUsings.g.csA
