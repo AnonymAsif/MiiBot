@@ -1,6 +1,7 @@
 ﻿using DSharpPlus;
 using DSharpPlus.SlashCommands;
-using DSharpPlus.VoiceNext;
+using DSharpPlus.Net;
+using DSharpPlus.Lavalink;
 
 namespace MiiBot
 {
@@ -22,17 +23,33 @@ namespace MiiBot
                 Intents = DiscordIntents.AllUnprivileged     
             });
 
+            var endpoint = new ConnectionEndpoint
+            {
+                Hostname = "lavalink-repl.AsifRahman6.repl.co",
+                Port = 443
+            };
+
+            var lavalinkConfig = new LavalinkConfiguration
+            {
+                Password = "MiiBot",
+                RestEndpoint = endpoint,
+                SocketEndpoint = endpoint
+            };
+
             // Regular text commands (we're not using this for now - or ever?)
             // get with e.Message
             //bot.MessageCreated += async (s, e) => {};
 
             var slashCommands = bot.UseSlashCommands();
-            bot.UseVoiceNext();
+            var lavalink = bot.UseLavalink();
 
             for (int i = 0; i < whitelistedGuilds.Count(); i++)
+            {
                 slashCommands.RegisterCommands<Audio>(whitelistedGuilds[i]);
+            }
 
             await bot.ConnectAsync();
+            await lavalink.ConnectAsync(lavalinkConfig);
             await Task.Delay(-1);
         }   
     }
