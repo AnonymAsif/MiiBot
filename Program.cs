@@ -30,7 +30,7 @@ namespace MiiBot
             bot.UseVoiceNext();
 
             for (int i = 0; i < whitelistedGuilds.Count(); i++)
-                slashCommands.RegisterCommands<Commands>(whitelistedGuilds[i]);
+                slashCommands.RegisterCommands<Audio>(whitelistedGuilds[i]);
 
             await bot.ConnectAsync();
             await Task.Delay(-1);
