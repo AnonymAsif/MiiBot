@@ -1,47 +1,33 @@
-using System.Diagnostics;
-using System.Threading;
 using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
-using DSharpPlus.VoiceNext;
+using DSharpPlus.Lavalink;
 
 namespace MiiBot
 {
     public class Audio : ApplicationCommandModule
     {
-        private static VoiceNextConnection? voiceConnection = null;
-        private static Thread AudioThread;
-        private static Stream pcm;
-
-
         [SlashCommand("connect", "Connect To A Voice Channel")]
-        public async Task Join(InteractionContext ctx)
+        public async Task Connect(InteractionContext ctx)
         {
-            var voiceNext = ctx.Client.GetVoiceNext();
+            var lava = ctx.Client.GetLavalink();
 
-            if (voiceNext == null)
+            if (!lava.ConnectedNodes.Any())
             {
-                await Embeds.SendEmbed(ctx, "Problem!", "VoiceNext is not configured properly", DiscordColor.Red);
+                await Embeds.SendEmbed(ctx, "Problem!", "LavaLink is not configured properly", DiscordColor.Red);
                 return;
             }
 
-            if (voiceNext.GetConnection(ctx.Guild) != null)
+            var node = lava.ConnectedNodes.Values.First();
+
+            if (node.GetGuildConnection(ctx.Guild) != null)
             {
-                await Embeds.SendEmbed(ctx, "Already Connected!", "Already connected to your VC", DiscordColor.Red);
+                await Embeds.SendEmbed(ctx, "Already Connected!", "MiiBot is already connected to your VC", DiscordColor.Red);
                 return;
             }
 
-            DiscordChannel? voiceChannel = null;
-            foreach (KeyValuePair<ulong, DiscordChannel> channel in ctx.Guild.Channels)
-            {
-                if (channel.Value.Type == ChannelType.Voice)
-                {
-                    if (channel.Value.Users.Contains(ctx.User))
-                    {
-                        voiceChannel = channel.Value;
-                    }
-                }
-            }
+            // Get user's VC, or null if none
+            DiscordChannel? voiceChannel = ctx.Member?.VoiceState?.Channel ?? null;
 
             if (voiceChannel == null)
             {
@@ -49,81 +35,103 @@ namespace MiiBot
                 return;
             }
 
-            // Try to join VC
-            voiceConnection = await voiceChannel.ConnectAsync();
+            await node.ConnectAsync(voiceChannel);
 
-            await Embeds.SendEmbed(ctx, "Connected", "Successfully joined the VC", DiscordColor.Green);
+            await Embeds.SendEmbed(ctx, "Connected", "MiiBot successfully joined the VC", DiscordColor.Green);
         }
 
 
-        [SlashCommand("disconnect", "Disconnect From Voice Channel")]
+        [SlashCommand("disconnect", "Disconnect From A Voice Channel")]
         public async Task Disconnect(InteractionContext ctx)
         {
-            if (voiceConnection == null) return;
+            var lava = ctx.Client.GetLavalink();
 
-            voiceConnection.Disconnect();
-            voiceConnection = null;
-
-            if (AudioThread.IsAlive)
+            if (!lava.ConnectedNodes.Any())
             {
-                AudioThread.Abort();
-                await pcm.DisposeAsync();
+                await Embeds.SendEmbed(ctx, "Problem!", "LavaLink is not configured properly", DiscordColor.Red);
+                return;
             }
-            await Embeds.SendEmbed(ctx, "Disconnected", "Successfully left the VC", DiscordColor.Green);
+
+            var node = lava.ConnectedNodes.Values.First();
+
+            if (node.GetGuildConnection(ctx.Guild) == null)
+            {
+                await Embeds.SendEmbed(ctx, "Already Disconnected!", "MiiBot didn't find any VC to disconnect from", DiscordColor.Red);
+                return;
+            }
+
+            LavalinkGuildConnection voiceConnection = node.GetGuildConnection(ctx.Guild);
+            await voiceConnection.DisconnectAsync();
+
+            await Embeds.SendEmbed(ctx, "Disconnected", "MiiBot successfully left the VC", DiscordColor.Green);
         }
 
 
         [SlashCommand("play", "Play A Song From Youtube")]
         public async Task Play(
             InteractionContext ctx,
-            [Option("Youtube", "Enter Youtube Link")] string link = null
+            [Option("Youtube", "Enter Youtube Link")] string search = null
         )
         {
-            if (link == null)
+            // Get user's VC, or null if none
+            DiscordChannel? voiceChannel = ctx.Member?.VoiceState?.Channel ?? null;
+
+            if (voiceChannel == null)
             {
-                await Embeds.SendEmbed(ctx, "No Song Provided", "MiiBot wasn't given a song to play", DiscordColor.Red);
+                await Embeds.SendEmbed(ctx, "Please join a VC first", "MiiBot couldn't figure out which VC to join", DiscordColor.Red);
                 return;
             }
 
-            if (AudioThread != null && AudioThread.IsAlive)
+            var lava = ctx.Client.GetLavalink();
+            var node = lava.ConnectedNodes.Values.First();
+            var conn = node.GetGuildConnection(ctx.Guild);
+
+            if (conn == null)
             {
-                await Embeds.SendEmbed(ctx, "Already Playing", "MiiBot is already playing a song", DiscordColor.Red);
+                // Connect the bot first manually
+            }
+
+            var loadResult = await node.Rest.GetTracksAsync(search);
+
+            //If something went wrong on Lavalink's end                          
+            if (loadResult.LoadResultType == LavalinkLoadResultType.LoadFailed 
+                //or it just couldn't find anything.
+                || loadResult.LoadResultType == LavalinkLoadResultType.NoMatches
+            )
+            {
+                await Embeds.SendEmbed(ctx, "Nothing Found", "MiiBot couldn't gather any results from your search query", DiscordColor.Red);
                 return;
             }
 
-            string args = $"/C youtube-dl --ignore-errors -o - {link} | ffmpeg -err_detect ignore_err -i pipe:0 -ac 2 -f s16le -ar 48000 pipe:1";
-            var ffmpeg = Process.Start(new ProcessStartInfo
-            {
-                FileName = "cmd.exe",
-                Arguments = args,
-                RedirectStandardOutput = true,
-                UseShellExecute = false
-            });
-            
-            pcm = ffmpeg.StandardOutput.BaseStream;
+            var track = loadResult.Tracks.First();
 
-            VoiceTransmitSink transmit = voiceConnection.GetTransmitSink();
-
-            await Embeds.SendEmbed(ctx, "Playing Song", "Playing requested song!", DiscordColor.Yellow);
-
-            AudioThread = new Thread(() => pcm.CopyToAsync(transmit));
-
-            AudioThread.Start();
-            Console.WriteLine("Thread Started");
-            await pcm.DisposeAsync();
+            await conn.PlayAsync(track);
         }
 
 
-        [SlashCommand("stop", "Stop the currently playing song")]
-        public async Task Stop(InteractionContext ctx)
+        [SlashCommand("pause", "Pause The Currently Playing Song")]
+        public async Task Pause(InteractionContext ctx)
         {
-            if (!AudioThread.IsAlive)
+            var lava = ctx.Client.GetLavalink();
+            var node = lava.ConnectedNodes.Values.First();
+            var conn = node.GetGuildConnection(ctx.Guild);
+
+            if (conn == null || conn.CurrentState.CurrentTrack == null)
             {
-                await Embeds.SendEmbed(ctx, "Stop Right There", "MiiBot found nothing to stop playing!", DiscordColor.Red);
+                await Embeds.SendEmbed(ctx, "Nothing To Stop", "MiiBot isn't already playing anything", DiscordColor.Red);
                 return;
             }
-            AudioThread.Abort();
-            await pcm.DisposeAsync();
+
+            await conn.PauseAsync();
+
+            await Embeds.SendEmbed(ctx, "Song Paused", "MiiBot has paused the current song", DiscordColor.Green);
+        }
+
+
+        [SlashCommand("stop", "Stop The Currently Playing Song")]
+        public async Task Stop(InteractionContext ctx)
+        {
+            
         }
     }
 }
