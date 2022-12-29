@@ -48,7 +48,7 @@ class Program
         LLServer.Start();
 
         // Wait for server to start
-        System.Threading.Thread.Sleep(8000);
+        System.Threading.Thread.Sleep(20000);
 
         LavalinkExtension lavaLink = bot.UseLavalink();
         SlashCommandsExtension slashCommands = bot.UseSlashCommands();
@@ -62,7 +62,7 @@ class Program
         {
             slashCommands.RegisterCommands<MiiBot.Audio>(whitelistedGuilds[i]);
         }
-
+        
         await bot.ConnectAsync();
         await lavaLink.ConnectAsync(lavaLinkConfig);
 

@@ -4,6 +4,7 @@ using DSharpPlus.Interactivity.Extensions;
 using DSharpPlus.Entities;
 using DSharpPlus.Lavalink;
 using DSharpPlus.SlashCommands;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -117,13 +118,51 @@ namespace MiiBot
             var track = loadResult.Tracks.First();
             string description = "by: " + track.Author + "\nLength: " + track.Length + "\n URL: " + track.Uri;
 
-            
 
-            await Embeds.SendEmbed(ctx,
-                "Playing " + track.Title,
-                description,
-                DiscordColor.Green
-            );
+
+
+
+
+            
+            var interactivity = ctx.Client.GetInteractivity();
+
+            DiscordEmoji[] poll_options = {DiscordEmoji.FromName(ctx.Client, ":ok_hand:"), DiscordEmoji.FromName(ctx.Client, ":skull:")};
+
+            // then let's present the poll
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = "Poll time!",
+                Description = poll_options[0] + " " + poll_options[1]
+            };
+            var msg = await ctx.Channel.SendMessageAsync(embed: embed);
+
+            // add the options as reactions
+            foreach (var reaction in poll_options)
+            {
+                System.Threading.Thread.Sleep(300);
+                await msg.CreateReactionAsync(reaction);
+            }
+            var results = await interactivity.WaitForReactionAsync(x => Array.Exists(poll_options, element => element == x.Emoji) , msg, ctx.User);
+            // and finally post the results
+            //await ctx.CreateResponseAsync(results[0] + " " + results[1]);
+
+
+
+
+
+
+
+
+
+
+
+
+            // await Embeds.SendEmbed(ctx,
+            //     "Playing " + track.Title,
+            //     description,
+            //     DiscordColor.Blue
+            // );
+            Console.WriteLine("Playing Track: " + track.Title);
             await conn.PlayAsync(track);
         }
 
