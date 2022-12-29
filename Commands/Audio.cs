@@ -1,3 +1,5 @@
+using System.Linq;
+using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
@@ -26,8 +28,8 @@ namespace MiiBot
                 return;
             }
 
-            // Get user's VC, or null if none
-            DiscordChannel? voiceChannel = ctx.Member?.VoiceState?.Channel ?? null;
+            // Get user's VC
+            DiscordChannel voiceChannel = ctx.Member?.VoiceState?.Channel;
 
             if (voiceChannel == null)
             {
@@ -73,8 +75,8 @@ namespace MiiBot
             [Option("Youtube", "Enter Youtube Link")] string search = null
         )
         {
-            // Get user's VC, or null if none
-            DiscordChannel? voiceChannel = ctx.Member?.VoiceState?.Channel ?? null;
+            // Get user's VC
+            DiscordChannel voiceChannel = ctx.Member?.VoiceState?.Channel;
 
             if (voiceChannel == null)
             {
