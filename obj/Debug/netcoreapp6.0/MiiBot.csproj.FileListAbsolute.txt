@@ -27,3 +27,5 @@
 /home/runner/MiiBot/obj/Debug/netcoreapp6.0/ref/MiiBot.dll
 /home/runner/MiiBot/obj/Debug/netcoreapp6.0/MiiBot.pdb
 /home/runner/MiiBot/obj/Debug/netcoreapp6.0/MiiBot.genruntimeconfig.cache
+/home/runner/MiiBot/bin/Debug/netcoreapp6.0/ConcurrentCollections.dll
+/home/runner/MiiBot/bin/Debug/netcoreapp6.0/DSharpPlus.Interactivity.dll

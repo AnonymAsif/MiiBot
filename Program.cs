@@ -1,11 +1,13 @@
+using DSharpPlus;
+using DSharpPlus.Interactivity;
+using DSharpPlus.Interactivity.Extensions;
+using DSharpPlus.Net;
+using DSharpPlus.Lavalink;
+using DSharpPlus.SlashCommands;
 using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using DSharpPlus;
-using DSharpPlus.SlashCommands;
-using DSharpPlus.Net;
-using DSharpPlus.Lavalink;
 
 class Program
 {
@@ -14,44 +16,47 @@ class Program
         1041829398904586262, // Bot Testing
     };
 
-    static void Main(string[] args) => MainAsync().GetAwaiter().GetResult();
+    // LavaLink server process
+    private static Process LLServer = new Process();
 
+    static void Main(string[] args) => MainAsync().GetAwaiter().GetResult();
     static async Task MainAsync()
     {
-        var bot = new DiscordClient(new DiscordConfiguration()
+        DiscordClient bot = new DiscordClient(new DiscordConfiguration()
         {
-            Token = "MTA1Njc3NDc2NjI1OTg4MDAzNg.GVmVMO.b72pjlVw27wcZG-8dj5Gj4ZkZ-hCb-nsi6gpLs",
+            Token = System.Environment.GetEnvironmentVariable("token"),
             TokenType = TokenType.Bot,
             Intents = DiscordIntents.AllUnprivileged
         });
 
-        Process myProcess = new Process();
-        myProcess.StartInfo.UseShellExecute = false;
-        myProcess.StartInfo.FileName = "java";
-        myProcess.StartInfo.Arguments = "-jar Lavalink.jar";
-        Console.WriteLine("Starting LavaLink Server...");
-        myProcess.Start();
-        System.Threading.Thread.Sleep(8000);
-
-        var endpoint = new ConnectionEndpoint
+        var endPoint = new ConnectionEndpoint
         {
             Hostname = "127.0.0.1",
             Port = 235
         };
 
-        var lavalinkConfig = new LavalinkConfiguration
+        var lavaLinkConfig = new LavalinkConfiguration
         {
             Password = "MiiBot",
-            RestEndpoint = endpoint,
-            SocketEndpoint = endpoint
+            RestEndpoint = endPoint,
+            SocketEndpoint = endPoint
         };
 
-        // Regular text commands (we're not using this for now - or ever?)
-        // get with e.Message
-        //bot.MessageCreated += async (s, e) => {};
+        // Starts Lava Link Server
+        LLServer.StartInfo.FileName = "java";
+        LLServer.StartInfo.Arguments = "-jar Lavalink.jar";
+        LLServer.Start();
 
-        var slashCommands = bot.UseSlashCommands();
-        var lavalink = bot.UseLavalink();
+        // Wait for server to start
+        System.Threading.Thread.Sleep(8000);
+
+        LavalinkExtension lavaLink = bot.UseLavalink();
+        SlashCommandsExtension slashCommands = bot.UseSlashCommands();
+
+        bot.UseInteractivity(new InteractivityConfiguration()
+        {
+            Timeout = TimeSpan.FromSeconds(30)
+        });
 
         for (int i = 0; i < whitelistedGuilds.Count(); i++)
         {
@@ -59,7 +64,7 @@ class Program
         }
 
         await bot.ConnectAsync();
-        await lavalink.ConnectAsync(lavalinkConfig);
+        await lavaLink.ConnectAsync(lavaLinkConfig);
 
         await Task.Delay(-1);
     }

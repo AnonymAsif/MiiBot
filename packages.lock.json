@@ -19,6 +19,16 @@
           "System.Threading.Channels": "5.0.0"
         }
       },
+      "DSharpPlus.Interactivity": {
+        "type": "Direct",
+        "requested": "[4.3.0, )",
+        "resolved": "4.3.0",
+        "contentHash": "bODOZm408xx4EwYG6DPhdIX8rtZQQT45S2OhulPWi6QfxSODgFZvj97LIYQeX1FEOX0Eh7sqHBSCXlTlpAb2Eg==",
+        "dependencies": {
+          "ConcurrentHashSet": "1.1.0",
+          "DSharpPlus": "4.3.0"
+        }
+      },
       "DSharpPlus.Lavalink": {
         "type": "Direct",
         "requested": "[4.3.0, )",
@@ -37,6 +47,11 @@
           "DSharpPlus": "4.3.0",
           "Microsoft.Extensions.DependencyInjection": "5.0.1"
         }
+      },
+      "ConcurrentHashSet": {
+        "type": "Transitive",
+        "resolved": "1.1.0",
+        "contentHash": "1SuuhZe0wUJbchXdjS23O+quojkw0IXqM9LtUp3RwgQreDI4cj1lfDbdHnD4fOYEnUrftzVIYoonvPlsXm30Bg=="
       },
       "Emzi0767.Common": {
         "type": "Transitive",

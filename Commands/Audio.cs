@@ -1,9 +1,11 @@
+using DSharpPlus;
+using DSharpPlus.Interactivity;
+using DSharpPlus.Interactivity.Extensions;
+using DSharpPlus.Entities;
+using DSharpPlus.Lavalink;
+using DSharpPlus.SlashCommands;
 using System.Linq;
 using System.Threading.Tasks;
-using DSharpPlus;
-using DSharpPlus.Entities;
-using DSharpPlus.SlashCommands;
-using DSharpPlus.Lavalink;
 
 namespace MiiBot
 {
@@ -72,9 +74,17 @@ namespace MiiBot
         [SlashCommand("play", "Play A Song From Youtube")]
         public async Task Play(
             InteractionContext ctx,
-            [Option("Youtube", "Enter Youtube Link")] string search = null
+            [Option("Search", "Enter Search Query")] string search = null
         )
         {
+            var lava = ctx.Client.GetLavalink();
+
+            if (!lava.ConnectedNodes.Any())
+            {
+                await Embeds.SendEmbed(ctx, "Problem!", "LavaLink is not configured properly", DiscordColor.Red);
+                return;
+            }
+
             // Get user's VC
             DiscordChannel voiceChannel = ctx.Member?.VoiceState?.Channel;
 
@@ -84,29 +94,36 @@ namespace MiiBot
                 return;
             }
 
-            var lava = ctx.Client.GetLavalink();
             var node = lava.ConnectedNodes.Values.First();
+
+            if (node.GetGuildConnection(ctx.Guild) == null) await node.ConnectAsync(voiceChannel);
             var conn = node.GetGuildConnection(ctx.Guild);
 
-            if (conn == null)
-            {
-                // Connect the bot first manually
-            }
 
             var loadResult = await node.Rest.GetTracksAsync(search);
 
-            //If something went wrong on Lavalink's end                          
-            if (loadResult.LoadResultType == LavalinkLoadResultType.LoadFailed 
-                //or it just couldn't find anything.
-                || loadResult.LoadResultType == LavalinkLoadResultType.NoMatches
-            )
+            if (loadResult.LoadResultType == LavalinkLoadResultType.LoadFailed)
+            {
+                await Embeds.SendEmbed(ctx, "Something Went Wrong", "MiiBot couldn't load results", DiscordColor.Red);
+                return;
+            }
+
+            if (loadResult.LoadResultType == LavalinkLoadResultType.NoMatches)
             {
                 await Embeds.SendEmbed(ctx, "Nothing Found", "MiiBot couldn't gather any results from your search query", DiscordColor.Red);
                 return;
             }
 
             var track = loadResult.Tracks.First();
+            string description = "by: " + track.Author + "\nLength: " + track.Length + "\n URL: " + track.Uri;
 
+            
+
+            await Embeds.SendEmbed(ctx,
+                "Playing " + track.Title,
+                description,
+                DiscordColor.Green
+            );
             await conn.PlayAsync(track);
         }
 
@@ -120,7 +137,7 @@ namespace MiiBot
 
             if (conn == null || conn.CurrentState.CurrentTrack == null)
             {
-                await Embeds.SendEmbed(ctx, "Nothing To Stop", "MiiBot isn't already playing anything", DiscordColor.Red);
+                await Embeds.SendEmbed(ctx, "Nothing To Pause", "MiiBot isn't playing anything", DiscordColor.Red);
                 return;
             }
 
@@ -130,10 +147,41 @@ namespace MiiBot
         }
 
 
+        [SlashCommand("resume", "Resume the paused song")]
+        public async Task Resume(InteractionContext ctx)
+        {
+            var lava = ctx.Client.GetLavalink();
+            var node = lava.ConnectedNodes.Values.First();
+            var conn = node.GetGuildConnection(ctx.Guild);
+
+            if (conn == null || conn.CurrentState.CurrentTrack == null)
+            {
+                await Embeds.SendEmbed(ctx, "Nothing To Resume", "MiiBot isn't playing anything", DiscordColor.Red);
+                return;
+            }
+
+            await conn.ResumeAsync();
+
+            await Embeds.SendEmbed(ctx, "Song Resumed", "MiiBot has resumed the current song", DiscordColor.Green);
+        }
+
+
         [SlashCommand("stop", "Stop The Currently Playing Song")]
         public async Task Stop(InteractionContext ctx)
         {
-            
+            var lava = ctx.Client.GetLavalink();
+            var node = lava.ConnectedNodes.Values.First();
+            var conn = node.GetGuildConnection(ctx.Guild);
+
+            if (conn == null || conn.CurrentState.CurrentTrack == null)
+            {
+                await Embeds.SendEmbed(ctx, "Nothing To Stop", "MiiBot isn't playing anything", DiscordColor.Red);
+                return;
+            }
+
+            await conn.StopAsync();
+
+            await Embeds.SendEmbed(ctx, "Song Stopped", "MiiBot has stopped the current song", DiscordColor.Green);
         }
     }
 }
