@@ -115,54 +115,58 @@ namespace MiiBot
                 return;
             }
 
-            var track = loadResult.Tracks.First();
-            string description = "by: " + track.Author + "\nLength: " + track.Length + "\n URL: " + track.Uri;
-
-
-
-
-
-
-            
+            // Gets first 5 track results
+            var track_list = loadResult.Tracks.Take(5);
             var interactivity = ctx.Client.GetInteractivity();
 
-            DiscordEmoji[] poll_options = {DiscordEmoji.FromName(ctx.Client, ":ok_hand:"), DiscordEmoji.FromName(ctx.Client, ":skull:")};
+            DiscordEmoji[] poll_options = {
+                DiscordEmoji.FromName(ctx.Client, ":one:"),
+                DiscordEmoji.FromName(ctx.Client, ":two:"),
+                DiscordEmoji.FromName(ctx.Client, ":three:"),
+                DiscordEmoji.FromName(ctx.Client, ":four:"),
+                DiscordEmoji.FromName(ctx.Client, ":five:")
+            };
 
+            // Gettting list of tracks
+            string desc = "";
+            int ind = 1;
+            foreach (var t in track_list)
+            {
+                desc += $"{ind}: {t.Title} ({t.Length})\n";
+                ind++;
+            }
+            
             // then let's present the poll
             var embed = new DiscordEmbedBuilder
             {
-                Title = "Poll time!",
-                Description = poll_options[0] + " " + poll_options[1]
+                Title = "React to choose a song",
+                Description = desc,
+                Color = DiscordColor.Azure
             };
             var msg = await ctx.Channel.SendMessageAsync(embed: embed);
 
             // add the options as reactions
             foreach (var reaction in poll_options)
             {
-                System.Threading.Thread.Sleep(300);
+                System.Threading.Thread.Sleep(250);
                 await msg.CreateReactionAsync(reaction);
             }
-            var results = await interactivity.WaitForReactionAsync(x => Array.Exists(poll_options, element => element == x.Emoji) , msg, ctx.User);
-            // and finally post the results
-            //await ctx.CreateResponseAsync(results[0] + " " + results[1]);
 
+            // Waits for the user to react with an emoji in poll_options
+            var results = await interactivity.WaitForReactionAsync(react => Array.Exists(poll_options, element => element == react.Emoji), msg, ctx.User);
 
+            // Gets the selected track (by index)
+            var track = track_list.ElementAt(Array.FindIndex(poll_options, emoji => emoji == results.Result.Emoji));
+            string description = "by: " + track.Author + "\nLength: " + track.Length + "\n URL: " + track.Uri;
 
+            await ctx.Channel.DeleteMessageAsync(msg);
+            await ctx.Channel.SendMessageAsync(embed: new DiscordEmbedBuilder{
+                Title = "Playing " + track.Title,
+                Description = description,
+                Color = DiscordColor.Azure
+            });
 
-
-
-
-
-
-
-
-
-            // await Embeds.SendEmbed(ctx,
-            //     "Playing " + track.Title,
-            //     description,
-            //     DiscordColor.Blue
-            // );
-            Console.WriteLine("Playing Track: " + track.Title);
+            // Plays track
             await conn.PlayAsync(track);
         }
 
