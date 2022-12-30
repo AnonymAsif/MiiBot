@@ -48,7 +48,7 @@ class Program
         LLServer.Start();
 
         // Wait for server to start
-        System.Threading.Thread.Sleep(20000);
+        System.Threading.Thread.Sleep(10000);
 
         LavalinkExtension lavaLink = bot.UseLavalink();
         SlashCommandsExtension slashCommands = bot.UseSlashCommands();

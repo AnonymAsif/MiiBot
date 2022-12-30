@@ -1,7 +1,7 @@
 using DSharpPlus;
+using DSharpPlus.Entities;
 using DSharpPlus.Interactivity;
 using DSharpPlus.Interactivity.Extensions;
-using DSharpPlus.Entities;
 using DSharpPlus.Lavalink;
 using DSharpPlus.SlashCommands;
 using System;
@@ -12,36 +12,64 @@ namespace MiiBot
 {
     public class Audio : ApplicationCommandModule
     {
+        private async Task<bool> Checks(InteractionContext ctx, LavalinkExtension lava)
+        {
+            if (lava.ConnectedNodes.Any()) return true;
+            await Embeds.SendEmbed(ctx, "Problem!", "LavaLink is not configured properly", DiscordColor.Red);
+            return false;
+        }
+
+
+        private async Task<bool> Checks(InteractionContext ctx, DiscordChannel voiceChannel)
+        {
+            if (voiceChannel != null) return true;
+            await Embeds.SendEmbed(ctx, "Please join a VC first", "MiiBot couldn't figure out which VC to join", DiscordColor.Red);
+            return false;
+        }
+
+
+        private async Task<bool> Checks(InteractionContext ctx, LavalinkGuildConnection voiceConnection)
+        {
+            if (voiceConnection != null && voiceConnection.CurrentState.CurrentTrack != null) return true;
+            await Embeds.SendEmbed(ctx, "Nothing To Pause", "MiiBot isn't playing anything", DiscordColor.Red);
+            return false;
+        }
+
+
+        private async Task<bool> Checks(InteractionContext ctx, LavalinkNodeConnection node, bool connecting)
+        {
+            if (connecting)
+            {
+                if (node.GetGuildConnection(ctx.Guild) == null) return true;
+                await Embeds.SendEmbed(ctx, "Already Connected!", "MiiBot is already connected to your VC", DiscordColor.Red);
+                return false;
+            }
+            else
+            {
+                if (node.GetGuildConnection(ctx.Guild) != null) return true;
+                await Embeds.SendEmbed(ctx, "Already Disconnected!", "MiiBot didn't find any VC to disconnect from", DiscordColor.Red);
+                return false;
+            }
+        }
+
+
         [SlashCommand("connect", "Connect To A Voice Channel")]
         public async Task Connect(InteractionContext ctx)
         {
+            // Get lava client
             var lava = ctx.Client.GetLavalink();
+            if (!await Checks(ctx, lava)) return;
 
-            if (!lava.ConnectedNodes.Any())
-            {
-                await Embeds.SendEmbed(ctx, "Problem!", "LavaLink is not configured properly", DiscordColor.Red);
-                return;
-            }
-
+            // Get lava connection
             var node = lava.ConnectedNodes.Values.First();
+            if (!await Checks(ctx, node, true)) return;
 
-            if (node.GetGuildConnection(ctx.Guild) != null)
-            {
-                await Embeds.SendEmbed(ctx, "Already Connected!", "MiiBot is already connected to your VC", DiscordColor.Red);
-                return;
-            }
-
-            // Get user's VC
+            // Get User VC
             DiscordChannel voiceChannel = ctx.Member?.VoiceState?.Channel;
+            if (!await Checks(ctx, voiceChannel)) return;
 
-            if (voiceChannel == null)
-            {
-                await Embeds.SendEmbed(ctx, "Please join a VC first", "MiiBot couldn't figure out which VC to join", DiscordColor.Red);
-                return;
-            }
-
+            // Connect bot to VC
             await node.ConnectAsync(voiceChannel);
-
             await Embeds.SendEmbed(ctx, "Connected", "MiiBot successfully joined the VC", DiscordColor.Green);
         }
 
@@ -49,25 +77,17 @@ namespace MiiBot
         [SlashCommand("disconnect", "Disconnect From A Voice Channel")]
         public async Task Disconnect(InteractionContext ctx)
         {
+            // Get lava client
             var lava = ctx.Client.GetLavalink();
+            if (!await Checks(ctx, lava)) return;
 
-            if (!lava.ConnectedNodes.Any())
-            {
-                await Embeds.SendEmbed(ctx, "Problem!", "LavaLink is not configured properly", DiscordColor.Red);
-                return;
-            }
-
+            // Get lava connection
             var node = lava.ConnectedNodes.Values.First();
+            if (!await Checks(ctx, node, false)) return;
 
-            if (node.GetGuildConnection(ctx.Guild) == null)
-            {
-                await Embeds.SendEmbed(ctx, "Already Disconnected!", "MiiBot didn't find any VC to disconnect from", DiscordColor.Red);
-                return;
-            }
-
+            // Gets the active voice connection and disconnects
             LavalinkGuildConnection voiceConnection = node.GetGuildConnection(ctx.Guild);
             await voiceConnection.DisconnectAsync();
-
             await Embeds.SendEmbed(ctx, "Disconnected", "MiiBot successfully left the VC", DiscordColor.Green);
         }
 
@@ -75,33 +95,29 @@ namespace MiiBot
         [SlashCommand("play", "Play A Song From Youtube")]
         public async Task Play(
             InteractionContext ctx,
-            [Option("Search", "Enter Search Query")] string search = null
+            [Option("Search", "Enter Search Query")] string search = null,
+            [Option("URL", "Enter URL")] string searchURL = null
         )
         {
+            // Attempt to get the LavaLink connection
             var lava = ctx.Client.GetLavalink();
+            if (!await Checks(ctx, lava)) return;
 
-            if (!lava.ConnectedNodes.Any())
-            {
-                await Embeds.SendEmbed(ctx, "Problem!", "LavaLink is not configured properly", DiscordColor.Red);
-                return;
-            }
-
-            // Get user's VC
+            // Attempt to get the user's VC
             DiscordChannel voiceChannel = ctx.Member?.VoiceState?.Channel;
+            if (!await Checks(ctx, voiceChannel)) return;
 
-            if (voiceChannel == null)
-            {
-                await Embeds.SendEmbed(ctx, "Please join a VC first", "MiiBot couldn't figure out which VC to join", DiscordColor.Red);
-                return;
-            }
-
+            // Get lava connection
             var node = lava.ConnectedNodes.Values.First();
 
+            // Attempt to establish the voice connection if none
             if (node.GetGuildConnection(ctx.Guild) == null) await node.ConnectAsync(voiceChannel);
-            var conn = node.GetGuildConnection(ctx.Guild);
+            var voiceConnection = node.GetGuildConnection(ctx.Guild);
 
-
-            var loadResult = await node.Rest.GetTracksAsync(search);
+            // Get a list of available tracks from search query (or directly fetch from link if provided)
+            LavalinkLoadResult loadResult;
+            if (searchURL != null) loadResult = await node.Rest.GetTracksAsync(searchURL);
+            else loadResult = await node.Rest.GetTracksAsync(search);
 
             if (loadResult.LoadResultType == LavalinkLoadResultType.LoadFailed)
             {
@@ -115,59 +131,74 @@ namespace MiiBot
                 return;
             }
 
-            // Gets first 5 track results
-            var track_list = loadResult.Tracks.Take(5);
+            // Setup client interactivity
             var interactivity = ctx.Client.GetInteractivity();
+            DSharpPlus.Lavalink.LavalinkTrack track;
 
-            DiscordEmoji[] poll_options = {
-                DiscordEmoji.FromName(ctx.Client, ":one:"),
-                DiscordEmoji.FromName(ctx.Client, ":two:"),
-                DiscordEmoji.FromName(ctx.Client, ":three:"),
-                DiscordEmoji.FromName(ctx.Client, ":four:"),
-                DiscordEmoji.FromName(ctx.Client, ":five:")
-            };
-
-            // Gettting list of tracks
-            string desc = "";
-            int ind = 1;
-            foreach (var t in track_list)
+            // Using custom search
+            if (searchURL == null)
             {
-                desc += $"{ind}: {t.Title} ({t.Length})\n";
-                ind++;
+                // Gets first 'trackCount' track results (or however many found)
+                int trackCount = 5;
+                var trackList = loadResult.Tracks.Take(trackCount);
+                trackCount = trackList.Count();
+
+                // Contains 'trackCount' buttons for embed
+                DiscordComponent[] buttonList = new DiscordComponent[trackCount];
+
+                // Creates embed buttons for tracks
+                for (int i = 0; i < trackCount; i++)
+                {
+                    buttonList[i] = new DiscordButtonComponent(
+                        ButtonStyle.Secondary,
+                        $"MiiBotPlayButton{i}",
+                        $"{i + 1}"
+                    );
+                }
+
+                // Create descriptions for each selected track
+                string embedDescription = "";
+                int trackIndex = 1;
+                foreach (var trackI in trackList)
+                {
+                    embedDescription += $"{trackIndex++}: {trackI.Title} ({trackI.Length})\n";
+                }
+
+                // Create the message with everything and send it
+                var messageBuilder = new DiscordMessageBuilder()
+                .AddEmbed(
+                    new DiscordEmbedBuilder
+                    {
+                        Title = "Select a song",
+                        Description = embedDescription,
+                        Color = DiscordColor.Azure
+                    }
+                )
+                .AddComponents(buttonList);
+                var songRequestMessage = await messageBuilder.SendAsync(ctx.Channel); 
+                
+                // Wait for a button to be selected
+                var interactionResult = await interactivity.WaitForButtonAsync(songRequestMessage, ctx.User);
+
+                // Gets the selected track (by index)
+                track = trackList.ElementAt(interactionResult.Result.Id.Last() - '0');
+
+                // Delete the sent message
+                await ctx.Channel.DeleteMessageAsync(songRequestMessage);
             }
-            
-            // then let's present the poll
-            var embed = new DiscordEmbedBuilder
+            // If a link was used, just get it by link
+            else track = loadResult.Tracks.First(); 
+
+            // Send updated message with info about selected track
+            await ctx.Channel.SendMessageAsync(embed: new DiscordEmbedBuilder
             {
-                Title = "React to choose a song",
-                Description = desc,
-                Color = DiscordColor.Azure
-            };
-            var msg = await ctx.Channel.SendMessageAsync(embed: embed);
-
-            // add the options as reactions
-            foreach (var reaction in poll_options)
-            {
-                System.Threading.Thread.Sleep(250);
-                await msg.CreateReactionAsync(reaction);
-            }
-
-            // Waits for the user to react with an emoji in poll_options
-            var results = await interactivity.WaitForReactionAsync(react => Array.Exists(poll_options, element => element == react.Emoji), msg, ctx.User);
-
-            // Gets the selected track (by index)
-            var track = track_list.ElementAt(Array.FindIndex(poll_options, emoji => emoji == results.Result.Emoji));
-            string description = "by: " + track.Author + "\nLength: " + track.Length + "\n URL: " + track.Uri;
-
-            await ctx.Channel.DeleteMessageAsync(msg);
-            await ctx.Channel.SendMessageAsync(embed: new DiscordEmbedBuilder{
                 Title = "Playing " + track.Title,
-                Description = description,
+                Description = "by: " + track.Author + "\nLength: " + track.Length + "\n URL: " + track.Uri,
                 Color = DiscordColor.Azure
-            });
+            }); 
 
             // Plays track
-            await conn.PlayAsync(track);
+            await voiceConnection.PlayAsync(track);
         }
 
 
@@ -176,15 +207,11 @@ namespace MiiBot
         {
             var lava = ctx.Client.GetLavalink();
             var node = lava.ConnectedNodes.Values.First();
-            var conn = node.GetGuildConnection(ctx.Guild);
+            var voiceConnection = node.GetGuildConnection(ctx.Guild);
 
-            if (conn == null || conn.CurrentState.CurrentTrack == null)
-            {
-                await Embeds.SendEmbed(ctx, "Nothing To Pause", "MiiBot isn't playing anything", DiscordColor.Red);
-                return;
-            }
+            if (!await Checks(ctx, voiceConnection)) return;
 
-            await conn.PauseAsync();
+            await voiceConnection.PauseAsync();
 
             await Embeds.SendEmbed(ctx, "Song Paused", "MiiBot has paused the current song", DiscordColor.Green);
         }
@@ -195,15 +222,11 @@ namespace MiiBot
         {
             var lava = ctx.Client.GetLavalink();
             var node = lava.ConnectedNodes.Values.First();
-            var conn = node.GetGuildConnection(ctx.Guild);
+            var voiceConnection = node.GetGuildConnection(ctx.Guild);
 
-            if (conn == null || conn.CurrentState.CurrentTrack == null)
-            {
-                await Embeds.SendEmbed(ctx, "Nothing To Resume", "MiiBot isn't playing anything", DiscordColor.Red);
-                return;
-            }
+            if (!await Checks(ctx, voiceConnection)) return;
 
-            await conn.ResumeAsync();
+            await voiceConnection.ResumeAsync();
 
             await Embeds.SendEmbed(ctx, "Song Resumed", "MiiBot has resumed the current song", DiscordColor.Green);
         }
@@ -214,15 +237,11 @@ namespace MiiBot
         {
             var lava = ctx.Client.GetLavalink();
             var node = lava.ConnectedNodes.Values.First();
-            var conn = node.GetGuildConnection(ctx.Guild);
+            var voiceConnection = node.GetGuildConnection(ctx.Guild);
 
-            if (conn == null || conn.CurrentState.CurrentTrack == null)
-            {
-                await Embeds.SendEmbed(ctx, "Nothing To Stop", "MiiBot isn't playing anything", DiscordColor.Red);
-                return;
-            }
+            if (!await Checks(ctx, voiceConnection)) return;
 
-            await conn.StopAsync();
+            await voiceConnection.StopAsync();
 
             await Embeds.SendEmbed(ctx, "Song Stopped", "MiiBot has stopped the current song", DiscordColor.Green);
         }
