@@ -1,6 +1,6 @@
 server: # REST and WS server
-  port: 443
-  address: lavalink-repl.AsifRahman6.repl.co
+  port: 235
+  address: 127.0.0.1
 spring:
   main:
     banner-mode: log
