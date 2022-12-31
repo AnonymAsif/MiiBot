@@ -327,8 +327,7 @@ namespace MiiBot
             if (!await Checks(ctx, voiceConnection, "Stop")) return;
 
             await voiceConnection.StopAsync();
-
-            throw new Exception("Skill Issue my guy");
+            
             await Embeds.SendEmbed(ctx, "Song Stopped", "MiiBot has stopped the current song", DiscordColor.Green);
         }
     }
