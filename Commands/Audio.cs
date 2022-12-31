@@ -3,8 +3,10 @@ using DSharpPlus.Entities;
 using DSharpPlus.Interactivity;
 using DSharpPlus.Interactivity.Extensions;
 using DSharpPlus.Lavalink;
+using DSharpPlus.Lavalink.EventArgs;
 using DSharpPlus.SlashCommands;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,8 +15,9 @@ namespace MiiBot
     public class Audio : ApplicationCommandModule
     {
         // Contains the tracks in the queue
-        private static LavalinkTrack[] trackQueue = { };
+        private static Queue<LavalinkTrack> trackQueue = new Queue<LavalinkTrack>();
         private static bool isPlayerPaused = false;
+
 
         private async Task<bool> Checks(InteractionContext ctx, LavalinkExtension lava)
         {
@@ -90,7 +93,7 @@ namespace MiiBot
 
 
         [SlashCommand("connect", "Connect To A Voice Channel")]
-        public async Task Connect(InteractionContext ctx)
+        public async Task Connect(InteractionContext ctx, [Option("Hidden", "Hide bot message on connection")] bool isHiddenMessage = false)
         {
             // Get lava client
             var lava = ctx.Client.GetLavalink();
@@ -106,7 +109,13 @@ namespace MiiBot
 
             // Connect bot to VC
             await node.ConnectAsync(voiceChannel);
-            await Embeds.SendEmbed(ctx, "Connected", "MiiBot successfully joined the VC", DiscordColor.Green);
+
+            if (!isHiddenMessage) await Embeds.SendEmbed(ctx, "Connected", "MiiBot successfully joined the VC", DiscordColor.Green);
+            
+            var voiceConnection = node.GetGuildConnection(ctx.Guild);
+            
+            // Register the playback finished event
+            voiceConnection.PlaybackFinished += async (LavalinkGuildConnection _, TrackFinishEventArgs e) => await PlayFromQueue(ctx, voiceConnection, e);
         }
 
 
@@ -123,8 +132,15 @@ namespace MiiBot
 
             // Gets the active voice connection and disconnects
             LavalinkGuildConnection voiceConnection = node.GetGuildConnection(ctx.Guild);
+
+            // Remove the playback finished event
+            voiceConnection.PlaybackFinished -= async (LavalinkGuildConnection _, TrackFinishEventArgs e) => await PlayFromQueue(ctx, voiceConnection, e);
+            
             await voiceConnection.DisconnectAsync();
             await Embeds.SendEmbed(ctx, "Disconnected", "MiiBot successfully left the VC", DiscordColor.Green);
+
+            // Reset the queue
+            trackQueue.Clear();
         }
 
 
@@ -132,17 +148,18 @@ namespace MiiBot
         public async Task Play(
             InteractionContext ctx,
             [Option("Search", "Enter Search Query")] string search = null,
-            [Option("URL", "Enter URL")] string searchURL = null
+            [Option("URL", "Enter URL")] string searchURL = null,
+            [Option("Hidden", "Hide Bot Message on Queue")] bool isHidden = false
         )
         {
-            if (search == null && search == null)
+            if (search == null && searchURL == null)
             {
                 await Embeds.SendEmbed(ctx, "No Search Query Provided", "MiiBot doesn't have any query to work with", DiscordColor.Red);
                 return;
             }
 
             // Defers response
-            await ctx.DeferAsync();
+            await ctx.DeferAsync(ephemeral: isHidden);
 
             // Attempt to get the LavaLink connection
             var lava = ctx.Client.GetLavalink();
@@ -155,10 +172,10 @@ namespace MiiBot
             // Get lava connection
             var node = lava.ConnectedNodes.Values.First();
 
-            // Attempt to establish the voice connection if none
-            if (node.GetGuildConnection(ctx.Guild) == null) await node.ConnectAsync(voiceChannel);
+            // Attempt to establish the voice connection - if none, connects
+            if (node.GetGuildConnection(ctx.Guild) == null) await Connect(ctx, true);
             var voiceConnection = node.GetGuildConnection(ctx.Guild);
-
+            
             // Results from search Query or URL
             LavalinkLoadResult loadResult;
 
@@ -246,7 +263,7 @@ namespace MiiBot
                 .AddEmbed(
                     new DiscordEmbedBuilder
                     {
-                        Title = "Select a song",
+                        Title = "Select A Song",
                         Description = embedDescription,
                         Color = DiscordColor.Azure
                     }
@@ -264,21 +281,49 @@ namespace MiiBot
                 await ctx.Channel.DeleteMessageAsync(songRequestMessage);
             }
             // If a link was used, just get it by link
-            else track = loadResult.Tracks.First();
+            else track = loadResult.Tracks.First();  
 
-            // Edits the defered response to contain Track information
-            await ctx.EditResponseAsync(new DiscordWebhookBuilder().AddEmbed(
+            // Edits the defered response to let the user know the song has been queued
+            trackQueue.Enqueue(track);
+
+            // If no song is currently playing - queue was empty originally
+            if (voiceConnection.CurrentState.CurrentTrack == null)
+            {
+                // Delete the queueing message
+                await ctx.DeleteResponseAsync();
+
+                // Play song
+                await PlayFromQueue(ctx, voiceConnection);
+                isPlayerPaused = false;
+                return;
+            }
+            
+            var editedMessage = await ctx.EditResponseAsync(new DiscordWebhookBuilder().AddEmbed(
                 new DiscordEmbedBuilder
                 {
-                    Title = "Playing " + track.Title,
-                    Description = "by: " + track.Author + "\nLength: " + track.Length + "\n URL: " + track.Uri,
+                    Title = "Song Queued",
+                    Description = $"{track.Title} has been queued\nPosition #{trackQueue.Count() + 1}",
                     Color = DiscordColor.Azure
                 }
             ));
+        }
 
-            // Plays track
-            isPlayerPaused = false;
-            await voiceConnection.PlayAsync(track);
+
+        public async Task PlayFromQueue(InteractionContext ctx, LavalinkGuildConnection voiceConnection, TrackFinishEventArgs e = null)
+        {   
+            if (trackQueue.Count() >= 1)
+            {
+                LavalinkTrack track = trackQueue.Dequeue();
+                await voiceConnection.PlayAsync(track);
+                isPlayerPaused = false;
+
+                await ctx.Channel.SendMessageAsync(embed: new DiscordEmbedBuilder{
+                    Title = "Playing " + track.Title,
+                    Description = "by: " + track.Author + "\nLength: " + track.Length + "\n URL: " + track.Uri,
+                    Color = DiscordColor.Azure
+                });
+            }
+            return;
         }
 
 
@@ -289,11 +334,10 @@ namespace MiiBot
             var node = lava.ConnectedNodes.Values.First();
             var voiceConnection = node.GetGuildConnection(ctx.Guild);
 
-            // Checks for valid voiceConnect || checks if already paused
+            // Checks for valid voiceConnection || Checks if already paused
             if (!await Checks(ctx, voiceConnection, "Pause") || !await Checks(ctx, true)) return;
 
             await voiceConnection.PauseAsync();
-            Console.WriteLine("Player State: " + voiceConnection.CurrentState);
 
             isPlayerPaused = true;
             await Embeds.SendEmbed(ctx, "Song Paused", "MiiBot has paused the current song", DiscordColor.Green);
@@ -307,7 +351,7 @@ namespace MiiBot
             var node = lava.ConnectedNodes.Values.First();
             var voiceConnection = node.GetGuildConnection(ctx.Guild);
 
-            // Checks for valid voiceConnect || checks if already playing
+            // Checks for valid voiceConnection || Checks if already playing
             if (!await Checks(ctx, voiceConnection, "Resume") || !await Checks(ctx, false)) return;
 
             await voiceConnection.ResumeAsync();
@@ -326,9 +370,13 @@ namespace MiiBot
 
             if (!await Checks(ctx, voiceConnection, "Stop")) return;
 
-            await voiceConnection.StopAsync();
+            // Reset the queue
+            trackQueue.Clear();
             
-            await Embeds.SendEmbed(ctx, "Song Stopped", "MiiBot has stopped the current song", DiscordColor.Green);
+            await voiceConnection.StopAsync();
+
+            await Embeds.SendEmbed(ctx, "Song Stopped", "MiiBot has stopped the current queue", DiscordColor.Green);
+            
         }
     }
 }

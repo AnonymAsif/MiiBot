@@ -44,7 +44,7 @@ class Program
 
         // Starts Lava Link Server
         LLServer.StartInfo.FileName = "java";
-        LLServer.StartInfo.Arguments = "-jar Lavalink.jar";
+        LLServer.StartInfo.Arguments = "-Xms1g -Xmx2g -jar Lavalink.jar";
         LLServer.Start();
 
         // Wait for server to start
@@ -65,7 +65,7 @@ class Program
 
         await bot.ConnectAsync();
         await lavaLink.ConnectAsync(lavaLinkConfig);
-
+        
         await Task.Delay(-1);
     }
 }
