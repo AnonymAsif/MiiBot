@@ -62,7 +62,7 @@ class Program
         {
             slashCommands.RegisterCommands<MiiBot.Audio>(whitelistedGuilds[i]);
         }
-        
+
         await bot.ConnectAsync();
         await lavaLink.ConnectAsync(lavaLinkConfig);
 
