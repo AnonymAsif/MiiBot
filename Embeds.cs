@@ -18,7 +18,8 @@ namespace MiiBot
             string timeStamp = null,
             string url = "",
             int fieldCount = 0,
-            string[][] fieldArray = null
+            string[][] fieldArray = null,
+            bool ephemeral = false
         )
         {
             DiscordEmbedBuilder embed = new DiscordEmbedBuilder
@@ -39,8 +40,7 @@ namespace MiiBot
                 // name, value, inline
                 embed.AddField(fieldArray[i][0], fieldArray[i][1], true);
             }
-
-            await ctx.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource, new DiscordInteractionResponseBuilder().AddEmbed(embed));
+            await ctx.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource, new DiscordInteractionResponseBuilder().AsEphemeral(ephemeral).AddEmbed(embed));
         }
     }
 }
