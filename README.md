@@ -26,12 +26,12 @@ MiiBot still isn't sure how far he is in his exploration journey.
 
 ## Features
 
-<h3>Always Awake</h3>
+<h4>Always Awake</h4>
 
 MiiBot doesn't have the time sleep. He is too curious. <br>
 Rest assured that you can always count on MiiBot being ready to play Wii Music!
 
-<h3>Multi-Instrumentalist</h3>
+<h4>Multi-Instrumentalist</h4>
 MiiBot can play multiple instruments - don't worry he's had a lot of time to practice. <br>
 This means that he supports playback from Youtube and SoundCloud.
 
