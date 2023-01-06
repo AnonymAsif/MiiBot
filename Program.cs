@@ -1,4 +1,5 @@
 using DSharpPlus;
+using DSharpPlus.Entities;
 using DSharpPlus.Interactivity;
 using DSharpPlus.Interactivity.Extensions;
 using DSharpPlus.Net;
@@ -11,30 +12,34 @@ using System.Threading.Tasks;
 
 class Program
 {
-    // Add server ID's for which are being used by MiiBot
+    // Add the server IDs that use MiiBot here
     private readonly static ulong[] whitelistedGuilds = {
         1041829398904586262, // Bot Testing
     };
 
-    // LavaLink server process
+    // Lavalink server process
     private static Process LLServer = new Process();
 
+    // Application Entry Point
     static void Main(string[] args) => MainAsync().GetAwaiter().GetResult();
     static async Task MainAsync()
     {
+        // MiiBot configuration
         DiscordClient bot = new DiscordClient(new DiscordConfiguration()
         {
             Token = System.Environment.GetEnvironmentVariable("token"),
             TokenType = TokenType.Bot,
-            Intents = DiscordIntents.AllUnprivileged
+            Intents = DiscordIntents.AllUnprivileged,
         });
 
+        // Lavalink server connection information
         var endPoint = new ConnectionEndpoint
         {
             Hostname = "127.0.0.1",
             Port = 235
         };
 
+        // Lavalink server configuration
         var lavaLinkConfig = new LavalinkConfiguration
         {
             Password = "MiiBot",
@@ -42,30 +47,38 @@ class Program
             SocketEndpoint = endPoint
         };
 
-        // Starts Lava Link Server
-        LLServer.StartInfo.FileName = "java";
-        LLServer.StartInfo.Arguments = "-Xms1g -Xmx2g -jar Lavalink.jar";
-        LLServer.Start();
-
-        // Wait for server to start
-        System.Threading.Thread.Sleep(10000);
-
+        // Extra MiiBot dependencies
         LavalinkExtension lavaLink = bot.UseLavalink();
         SlashCommandsExtension slashCommands = bot.UseSlashCommands();
-
         bot.UseInteractivity(new InteractivityConfiguration()
         {
-            Timeout = TimeSpan.FromSeconds(30)
+            Timeout = TimeSpan.FromSeconds(60)
         });
 
+        // Register slash commands from the following classes
         for (int i = 0; i < whitelistedGuilds.Count(); i++)
         {
             slashCommands.RegisterCommands<MiiBot.Audio>(whitelistedGuilds[i]);
         }
 
-        await bot.ConnectAsync();
+        // Set MiiBot's status
+        DiscordActivity activity = new DiscordActivity("Alone in the Miiverse", ActivityType.Streaming);
+        activity.StreamUrl = "https://www.youtube.com/watch?v=64akWe7eFzQ";
+
+        // Connect MiiBot to Discord
+        await bot.ConnectAsync(activity);
+
+        // Starts Lavalink server
+        LLServer.StartInfo.FileName = "java";
+        LLServer.StartInfo.Arguments = "-Xms1g -Xmx2g -jar Lavalink.jar";
+        LLServer.Start();
+
+        // Delay first connection (saves time)
+        System.Threading.Thread.Sleep(8000);
+
+        // Connect MiiBot to the LLServer
         await lavaLink.ConnectAsync(lavaLinkConfig);
-        
+
         await Task.Delay(-1);
     }
 }
