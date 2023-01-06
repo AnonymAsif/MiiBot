@@ -11,7 +11,8 @@
           "DSharpPlus": "4.3.0",
           "DSharpPlus.Interactivity": "4.3.0",
           "DSharpPlus.Lavalink": "4.3.0",
-          "DSharpPlus.SlashCommands": "4.3.0"
+          "DSharpPlus.SlashCommands": "4.3.0",
+          "Newtonsoft.Json": "13.0.2"
         },
         "runtime": {
           "MiiBot.dll": {}
