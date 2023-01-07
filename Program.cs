@@ -59,11 +59,12 @@ class Program
         // Register slash commands from the following classes
         for (int i = 0; i < whitelistedGuilds.Count(); i++)
         {
-            slashCommands.RegisterCommands<MiiBot.Audio>(whitelistedGuilds[i]);
+            slashCommands.RegisterCommands<MiiBot.Player>(whitelistedGuilds[i]);
+            slashCommands.RegisterCommands<MiiBot.Queue>(whitelistedGuilds[i]);
         }
-
+        
         // Set MiiBot's status
-        DiscordActivity activity = new DiscordActivity("Alone in the Miiverse", ActivityType.Streaming);
+        DiscordActivity activity = new DiscordActivity("Wii Music", ActivityType.Playing);
         activity.StreamUrl = "https://www.youtube.com/watch?v=64akWe7eFzQ";
 
         // Connect MiiBot to Discord
@@ -80,6 +81,7 @@ class Program
         // Connect MiiBot to the LLServer
         await lavaLink.ConnectAsync(lavaLinkConfig);
 
+        // Stop from exiting
         await Task.Delay(-1);
     }
 }

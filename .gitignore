@@ -42,3 +42,8 @@ bin/Debug/net7.0/runtimes/win-x86/native/libopus.dll
 bin/Debug/net7.0/runtimes/win-x64/native/libsodium.dll
 bin/Debug/net7.0/runtimes/win-x64/native/libopus.dll
 bin/Debug/net7.0/DSharpPlus.VoiceNext.dll
+.replit
+replit.nix
+packages.lock.json
+.upm/store.json
+logs/
