@@ -1668,3 +1668,695 @@ Caused by: java.lang.InterruptedException: null
 2023-01-07 17:56:03.308  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
 2023-01-07 17:56:03.347  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
 2023-01-07 17:56:03.410  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAA2QIADFdvcmxkIEJvd3NlcgAIQm93bCBNYW4AAAAAAAOZBQByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDY1ODI3NDMxL2RhN2RjMzU0LWU3OTktNGE2Zi1iOGZiLTYwNzRkNTZiZGMzZC9zdHJlYW0vaGxzAAEALGh0dHBzOi8vc291bmRjbG91ZC5jb20vYm93bC1tYW4vd29ybGQtYm93c2VyAApzb3VuZGNsb3VkAAAAAAAAAAA=","op":"play","guildId":"1042904993382027315"}
+2023-01-07 17:57:23.304  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=YXivc8z6PXk"
+2023-01-07 17:57:23.364  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track DVRST - I Hate You I Love You
+2023-01-07 17:57:23.375  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAfgIAH0RWUlNUIC0gU3VucmlzZSDjgrXjg7Pjg6njgqTjgroABURWUlNUAAAAAAACUcAAC2RlQmlxM2s0UjJNAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9ZGVCaXEzazRSMk0AB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"1041829398904586262"}
+2023-01-07 17:59:55.541  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=deBiq3k4R2M"
+2023-01-07 17:59:55.597  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track DVRST - Sunrise サンライズ
+2023-01-07 17:59:55.604  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAdgIAD1N0aWxsIEJyZWF0aGluZwANRFZSU1QgLSBUb3BpYwAAAAAAAvXQAAtnMGR3cG1lSDBOMAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWcwZHdwbWVIME4wAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"1041829398904586262"}
+2023-01-07 17:59:59.140  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/bowl-man/world-bowser"
+2023-01-07 17:59:59.334  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track World Bowser
+2023-01-07 17:59:59.351  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:01:22.738  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 18:01:22.796  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 18:01:22.804  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAA2QIADFdvcmxkIEJvd3NlcgAIQm93bCBNYW4AAAAAAAOZBQByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDY1ODI3NDMxL2RhN2RjMzU0LWU3OTktNGE2Zi1iOGZiLTYwNzRkNTZiZGMzZC9zdHJlYW0vaGxzAAEALGh0dHBzOi8vc291bmRjbG91ZC5jb20vYm93bC1tYW4vd29ybGQtYm93c2VyAApzb3VuZGNsb3VkAAAAAAAAAAA=","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:03:09.631  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=g0dwpmeH0N0"
+2023-01-07 18:03:09.678  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Still Breathing
+2023-01-07 18:03:09.690  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAcQIAEkRWUlNUIC0gQ2xvc2UgRXllcwAFRFZSU1QAAAAAAAIHiAALYW80UkNvbjExZVkAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1hbzRSQ29uMTFlWQAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:05:18.603  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/bowl-man/world-bowser"
+2023-01-07 18:05:18.802  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track World Bowser
+2023-01-07 18:05:18.812  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:05:18.816  INFO 24727 --- [lava-daemon-pool-playback-1-thread-2] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is CgtPZVc5dV9uc0gwZyjf4-adBg%3D%3D).
+2023-01-07 18:05:18.831  INFO 24727 --- [lava-daemon-pool-playback-1-thread-2] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgtKMXFZd3pnOGlZUSje6OadBg%3D%3D, next update will be after 600 seconds.
+2023-01-07 18:05:22.228  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=ao4RCon11eY"
+2023-01-07 18:05:22.287  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track DVRST - Close Eyes
+2023-01-07 18:05:22.298  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAbwIADkhlbnNvbm4tU2FoYXJhAAdIZW5zb25uAAAAAAACm/gAC3BJWjBRUldLMHpnAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9cElaMFFSV0swemcAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:06:42.322  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 18:06:42.366  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 18:06:42.376  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAA2QIADFdvcmxkIEJvd3NlcgAIQm93bCBNYW4AAAAAAAOZBQByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDY1ODI3NDMxL2RhN2RjMzU0LWU3OTktNGE2Zi1iOGZiLTYwNzRkNTZiZGMzZC9zdHJlYW0vaGxzAAEALGh0dHBzOi8vc291bmRjbG91ZC5jb20vYm93bC1tYW4vd29ybGQtYm93c2VyAApzb3VuZGNsb3VkAAAAAAAAAAA=","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:08:13.588  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=pIZ0QRWK0zg"
+2023-01-07 18:08:13.625  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Hensonn-Sahara
+2023-01-07 18:08:13.633  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAgAIAFm15IWxhbmUgLSBUaGlzIEZlZWxpbmcAEExJVEhVQU5JQU4gUEhPTksAAAAAAAKAoAALV3I5c1dHYjdRR0EAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1XcjlzV0diN1FHQQAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:10:38.146  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/bowl-man/world-bowser"
+2023-01-07 18:10:38.348  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track World Bowser
+2023-01-07 18:10:38.371  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:10:57.991  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Wr9sWGb7QGA"
+2023-01-07 18:10:58.025  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track my!lane - This Feeling
+2023-01-07 18:10:58.040  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAcgIAE0RWUlNUIC0gQXV0dW1uIFdpbmQABURWUlNUAAAAAAAB9AAAC1VZVzR3Y1FzWHdVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9VVlXNHdjUXNYd1UAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:12:01.740  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 18:12:01.785  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 18:12:01.794  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAA2QIADFdvcmxkIEJvd3NlcgAIQm93bCBNYW4AAAAAAAOZBQByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDY1ODI3NDMxL2RhN2RjMzU0LWU3OTktNGE2Zi1iOGZiLTYwNzRkNTZiZGMzZC9zdHJlYW0vaGxzAAEALGh0dHBzOi8vc291bmRjbG91ZC5jb20vYm93bC1tYW4vd29ybGQtYm93c2VyAApzb3VuZGNsb3VkAAAAAAAAAAA=","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:13:06.270  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=UYW4wcQsXwU"
+2023-01-07 18:13:06.319  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track DVRST - Autumn Wind
+2023-01-07 18:13:06.331  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAcwIABVRvdWdlABRvc2thbGl6YXRvci4gLSBUb3BpYwAAAAAAAohwAAtjREwzNVRzVEVtRQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWNETDM1VHNURW1FAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:15:52.086  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=cDL35TsTEmE"
+2023-01-07 18:15:52.089  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is CgtKMXFZd3pnOGlZUSje6OadBg%3D%3D).
+2023-01-07 18:15:52.104  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgtINDhfalBPVGhTayjY7eadBg%3D%3D, next update will be after 600 seconds.
+2023-01-07 18:15:52.157  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Touge
+2023-01-07 18:15:52.189  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAegIAEDVhZG1pbiAtIFNpbGVuY2UAEExJVEhVQU5JQU4gUEhPTksAAAAAAAHFIAALVGZXSEJyNmkzc1EAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1UZldIQnI2aTNzUQAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:15:57.527  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/bowl-man/world-bowser"
+2023-01-07 18:15:58.113  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track World Bowser
+2023-01-07 18:15:58.122  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:17:21.441  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 18:17:21.502  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 18:17:21.518  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAA2QIADFdvcmxkIEJvd3NlcgAIQm93bCBNYW4AAAAAAAOZBQByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDY1ODI3NDMxL2RhN2RjMzU0LWU3OTktNGE2Zi1iOGZiLTYwNzRkNTZiZGMzZC9zdHJlYW0vaGxzAAEALGh0dHBzOi8vc291bmRjbG91ZC5jb20vYm93bC1tYW4vd29ybGQtYm93c2VyAApzb3VuZGNsb3VkAAAAAAAAAAA=","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:17:48.591  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=TfWHBr6i3sQ"
+2023-01-07 18:17:48.639  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track 5admin - Silence
+2023-01-07 18:17:48.655  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAgwIAIUlOIEhFQVQgLSBSQkRBIFBST0QgW1BIT05LIFJFTUlYXQAIUkJEQSDimaoAAAAAAAG9UAALSms4aFpPOGJVRHMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1KazhoWk84YlVEcwAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:19:42.632  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Jk8hZO8bUDs"
+2023-01-07 18:19:42.684  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track IN HEAT - RBDA PROD [PHONK REMIX]
+2023-01-07 18:19:42.691  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAdQIACENyeXN0YWxzABNJc29sYXRlLmV4ZSAtIFRvcGljAAAAAAACHvgACzVDR1cyVllVNi1BAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9NUNHVzJWWVU2LUEAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:21:17.276  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/bowl-man/world-bowser"
+2023-01-07 18:21:17.484  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track World Bowser
+2023-01-07 18:21:17.493  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:22:01.955  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=5CGW2VYU6-A"
+2023-01-07 18:22:01.994  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Crystals
+2023-01-07 18:22:02.008  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAiQIAKkRWUlNULCBNQU5OWSAtINCX0LDQs9C+0YDQvtC00L3Ri9C5INC00L7QvAAFRFZSU1QAAAAAAANTkAALM2kzREJ5djdUeTgAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj0zaTNEQnl2N1R5OAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:22:40.834  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 18:22:40.882  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 18:22:40.890  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAA2QIADFdvcmxkIEJvd3NlcgAIQm93bCBNYW4AAAAAAAOZBQByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDY1ODI3NDMxL2RhN2RjMzU0LWU3OTktNGE2Zi1iOGZiLTYwNzRkNTZiZGMzZC9zdHJlYW0vaGxzAAEALGh0dHBzOi8vc291bmRjbG91ZC5jb20vYm93bC1tYW4vd29ybGQtYm93c2VyAApzb3VuZGNsb3VkAAAAAAAAAAA=","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:25:40.019  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=3i3DByv7Ty8"
+2023-01-07 18:25:40.102  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track DVRST, MANNY - Загородный дом
+2023-01-07 18:25:40.115  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAdAIAEk1DIE9SU0VOIC0gV0FSTklORwAITUMgT1JTRU4AAAAAAAH70AALeVQ1TmhtMk1wWkkAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj15VDVOaG0yTXBaSQAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:26:36.635  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/bowl-man/world-bowser"
+2023-01-07 18:26:36.863  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track World Bowser
+2023-01-07 18:26:36.870  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:26:36.872  INFO 24727 --- [lava-daemon-pool-playback-1-thread-2] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is CgtINDhfalBPVGhTayjY7eadBg%3D%3D).
+2023-01-07 18:26:36.889  INFO 24727 --- [lava-daemon-pool-playback-1-thread-2] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgtCUFVRa2pDeEdVcyjc8uadBg%3D%3D, next update will be after 600 seconds.
+2023-01-07 18:27:50.301  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=yT5Nhm2MpZI"
+2023-01-07 18:27:50.344  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track MC ORSEN - WARNING
+2023-01-07 18:27:50.351  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAjgIAJkR4cmsg44OA44O844KvIC0gUkFWRSAoT2ZmaWNpYWwgQXVkaW8pAA5EeHJrIOODgOODvOOCrwAAAAAAApQoAAtQVFpneFdfM0xJUQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVBUWmd4V18zTElRAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:28:00.283  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 18:28:00.347  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 18:28:00.358  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAA2QIADFdvcmxkIEJvd3NlcgAIQm93bCBNYW4AAAAAAAOZBQByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDY1ODI3NDMxL2RhN2RjMzU0LWU3OTktNGE2Zi1iOGZiLTYwNzRkNTZiZGMzZC9zdHJlYW0vaGxzAAEALGh0dHBzOi8vc291bmRjbG91ZC5jb20vYm93bC1tYW4vd29ybGQtYm93c2VyAApzb3VuZGNsb3VkAAAAAAAAAAA=","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:30:39.777  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=PTZgxW_3LIQ"
+2023-01-07 18:30:39.827  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Dxrk ダーク - RAVE (Official Audio)
+2023-01-07 18:30:39.840  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAdAIACkFmdGVyIERhcmsAEE1yLktpdHR5IC0gVG9waWMAAAAAAAPzuAALQ2w1VmtkNE4wM1EAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1DbDVWa2Q0TjAzUQAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:31:56.115  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/bowl-man/world-bowser"
+2023-01-07 18:31:56.493  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track World Bowser
+2023-01-07 18:31:56.501  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:33:19.875  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 18:33:19.925  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 18:33:19.940  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAA2QIADFdvcmxkIEJvd3NlcgAIQm93bCBNYW4AAAAAAAOZBQByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDY1ODI3NDMxL2RhN2RjMzU0LWU3OTktNGE2Zi1iOGZiLTYwNzRkNTZiZGMzZC9zdHJlYW0vaGxzAAEALGh0dHBzOi8vc291bmRjbG91ZC5jb20vYm93bC1tYW4vd29ybGQtYm93c2VyAApzb3VuZGNsb3VkAAAAAAAAAAA=","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:34:59.101  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Cl5Vkd4N03Q"
+2023-01-07 18:34:59.149  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track After Dark
+2023-01-07 18:34:59.156  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAfgIAEEVuZCBvZiB0aGUgV29ybGQAFEZPUkdPVFRFTkFHRSAtIFRvcGljAAAAAAACgKAAC1prNDA1blExU3Y4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Wms0MDVuUTFTdjgAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:37:15.675  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/bowl-man/world-bowser"
+2023-01-07 18:37:15.883  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track World Bowser
+2023-01-07 18:37:15.891  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:37:15.894  INFO 24727 --- [lava-daemon-pool-playback-1-thread-2] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is CgtCUFVRa2pDeEdVcyjc8uadBg%3D%3D).
+2023-01-07 18:37:15.913  INFO 24727 --- [lava-daemon-pool-playback-1-thread-2] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgtmdWRvUVl2Sm9jYyjb9-adBg%3D%3D, next update will be after 600 seconds.
+2023-01-07 18:37:43.255  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Zk405nQ1Sv8"
+2023-01-07 18:37:43.316  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track End of the World
+2023-01-07 18:37:43.322  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAcAIAEURWUlNUIC0gWU9VUiBOQU1FAAVEVlJTVAAAAAAAAi6YAAtXOUdYcUNCQVpiMAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVc5R1hxQ0JBWmIwAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:38:39.401  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 18:38:39.459  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 18:38:39.469  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAA2QIADFdvcmxkIEJvd3NlcgAIQm93bCBNYW4AAAAAAAOZBQByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDY1ODI3NDMxL2RhN2RjMzU0LWU3OTktNGE2Zi1iOGZiLTYwNzRkNTZiZGMzZC9zdHJlYW0vaGxzAAEALGh0dHBzOi8vc291bmRjbG91ZC5jb20vYm93bC1tYW4vd29ybGQtYm93c2VyAApzb3VuZGNsb3VkAAAAAAAAAAA=","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:40:06.499  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=W9GXqCBAZb0"
+2023-01-07 18:40:06.560  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track DVRST - YOUR NAME
+2023-01-07 18:40:06.568  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAlgIAN0JvdWxldmFyZCBEZXBvIGZlYXQuIElDM1BFQUsgLSDQntC20L7Qs9C4IChEVlJTVCBSZW1peCkABURWUlNUAAAAAAADbugAC1JrelVtanZ0U1VJAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Umt6VW1qdnRTVUkAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:42:35.218  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/bowl-man/world-bowser"
+2023-01-07 18:42:35.412  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track World Bowser
+2023-01-07 18:42:35.424  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:43:52.059  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=RkzUmjvtSUI"
+2023-01-07 18:43:52.350  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Boulevard Depo feat. IC3PEAK - Ожоги (DVRST Remix)
+2023-01-07 18:43:52.361  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAdgIAF0RWUlNULCBtb25yeGUgLSBEYXJsaW5nAAVEVlJTVAAAAAAAA1OQAAtJOExOSG8xRVVCYwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUk4TE5IbzFFVUJjAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:43:58.781  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 18:43:58.857  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 18:43:58.870  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAA2QIADFdvcmxkIEJvd3NlcgAIQm93bCBNYW4AAAAAAAOZBQByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDY1ODI3NDMxL2RhN2RjMzU0LWU3OTktNGE2Zi1iOGZiLTYwNzRkNTZiZGMzZC9zdHJlYW0vaGxzAAEALGh0dHBzOi8vc291bmRjbG91ZC5jb20vYm93bC1tYW4vd29ybGQtYm93c2VyAApzb3VuZGNsb3VkAAAAAAAAAAA=","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:47:30.497  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=I8LNHo1EUBc"
+2023-01-07 18:47:30.500  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is CgtmdWRvUVl2Sm9jYyjb9-adBg%3D%3D).
+2023-01-07 18:47:30.517  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgtJY21EcjhWaXlRWSjC_OadBg%3D%3D, next update will be after 600 seconds.
+2023-01-07 18:47:30.567  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track DVRST, monrxe - Darling
+2023-01-07 18:47:30.577  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAiwIALERWUlNULCA2WU5USE1BTkUsIEFOVElDWExUWFJFIC0gV2lsbCBCZSBTb29uAAVEVlJTVAAAAAAAAtKoAAtRSm53SDlJdUJsawABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVFKbndIOUl1QmxrAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:47:54.599  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/bowl-man/world-bowser"
+2023-01-07 18:47:54.791  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track World Bowser
+2023-01-07 18:47:54.797  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:49:18.160  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 18:49:18.200  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 18:49:18.210  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAA2QIADFdvcmxkIEJvd3NlcgAIQm93bCBNYW4AAAAAAAOZBQByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDY1ODI3NDMxL2RhN2RjMzU0LWU3OTktNGE2Zi1iOGZiLTYwNzRkNTZiZGMzZC9zdHJlYW0vaGxzAAEALGh0dHBzOi8vc291bmRjbG91ZC5jb20vYm93bC1tYW4vd29ybGQtYm93c2VyAApzb3VuZGNsb3VkAAAAAAAAAAA=","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:50:36.049  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=QJnwH9IuBlk"
+2023-01-07 18:50:36.090  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track DVRST, 6YNTHMANE, ANTICXLTXRE - Will Be Soon
+2023-01-07 18:50:36.098  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAbQIADkRWUlNUIC0gTW90aW9uAAVEVlJTVAAAAAAAAlHAAAtiX1RjdXBSclhvNAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWJfVGN1cFJyWG80AAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:53:07.668  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=b_TcupRrXo4"
+2023-01-07 18:53:07.707  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track DVRST - Motion
+2023-01-07 18:53:07.718  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAgwIAJERWUlNULCAkYXRvcmkgWm9vbSAtIFN0aWxsIEJyZWF0aGluZwAFRFZSU1QAAAAAAALeYAALQjItNE92NUZBTDAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1CMi00T3Y1RkFMMAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:53:14.146  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/bowl-man/world-bowser"
+2023-01-07 18:53:14.337  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track World Bowser
+2023-01-07 18:53:14.344  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:54:37.707  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 18:54:37.763  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 18:54:37.769  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAA2QIADFdvcmxkIEJvd3NlcgAIQm93bCBNYW4AAAAAAAOZBQByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDY1ODI3NDMxL2RhN2RjMzU0LWU3OTktNGE2Zi1iOGZiLTYwNzRkNTZiZGMzZC9zdHJlYW0vaGxzAAEALGh0dHBzOi8vc291bmRjbG91ZC5jb20vYm93bC1tYW4vd29ybGQtYm93c2VyAApzb3VuZGNsb3VkAAAAAAAAAAA=","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:56:15.350  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=B2-4Ov5FAL0"
+2023-01-07 18:56:15.430  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track DVRST, $atori Zoom - Still Breathing
+2023-01-07 18:56:15.434  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAeQIADU1FVEFNT1JQSE9TSVMAEklOVEVSV09STEQgLSBUb3BpYwAAAAAAAi6YAAtsSnZSb2hZU3JaTQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWxKdlJvaFlTclpNAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"1041829398904586262"}
+2023-01-07 18:58:33.496  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/bowl-man/world-bowser"
+2023-01-07 18:58:33.689  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track World Bowser
+2023-01-07 18:58:33.697  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1042904993382027315"}
+2023-01-07 18:58:33.699  INFO 24727 --- [lava-daemon-pool-playback-1-thread-2] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is CgtJY21EcjhWaXlRWSjC_OadBg%3D%3D).
+2023-01-07 18:58:33.714  INFO 24727 --- [lava-daemon-pool-playback-1-thread-2] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgtoYTFqc3NVcUQzZyjZgeedBg%3D%3D, next update will be after 600 seconds.
+2023-01-07 18:58:38.376  INFO 24727 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=lJvRohYSrZM"
+2023-01-07 18:58:38.410  INFO 24727 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track METAMORPHOSIS
+2023-01-07 18:58:38.421  INFO 24727 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAfAIAHURWUlNUIC0gSSBIYXRlIFlvdSBJIExvdmUgWW91AAVEVlJTVAAAAAAAAg9YAAtZWGl2Yzh6NlBYawABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVlYaXZjOHo2UFhrAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"1041829398904586262"}
+2023-01-07 19:01:42.920  INFO 163 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 16.0.1 on 8e3707eaf1bc with PID 163 (/home/runner/MiiBot/Lavalink.jar started by runner in /home/runner/MiiBot)
+2023-01-07 19:01:42.931  INFO 163 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-01-07 19:01:45.799  INFO 163 --- [main] lavalink.server.Launcher                 : Started Launcher in 4.285 seconds (JVM running for 6.558)
+2023-01-07 19:01:45.812  INFO 163 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2023-01-07 19:01:46.030  INFO 163 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.6.2
+	Build time:     08.11.2022 09:02:53 UTC
+	Branch          HEAD
+	Commit:         4782f1f
+	Commit time:    08.11.2022 09:01:14 UTC
+	JVM:            16.0.1
+	Lavaplayer      1.3.99.1-original
+
+2023-01-07 19:01:46.046  INFO 163 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-01-07 19:01:48.277  WARN 163 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-01-07 19:01:48.320  INFO 163 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-01-07 19:01:48.321  INFO 163 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2256 ms
+2023-01-07 19:01:49.643  INFO 163 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2023-01-07 19:01:50.081  INFO 163 --- [main] lavalink.server.config.KoeConfiguration  : OS: LINUX, Arch: X86_64
+2023-01-07 19:01:50.084  INFO 163 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2023-01-07 19:01:50.095  INFO 163 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2023-01-07 19:01:50.107  INFO 163 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2023-01-07 19:01:50.190  WARN 163 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2023-01-07 19:01:50.987  INFO 163 --- [main] io.undertow                              : starting server: Undertow - 2.2.16.Final
+2023-01-07 19:01:51.017  INFO 163 --- [main] org.xnio                                 : XNIO version 3.8.6.Final
+2023-01-07 19:01:51.148  INFO 163 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.6.Final
+2023-01-07 19:01:51.445  INFO 163 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2023-01-07 19:01:51.669  INFO 163 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 235 (http)
+2023-01-07 19:01:51.709  INFO 163 --- [main] lavalink.server.Launcher                 : Started Launcher in 5.865 seconds (JVM running for 12.468)
+2023-01-07 19:01:51.711  INFO 163 --- [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2023-01-07 19:01:54.671  INFO 163 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-07 19:01:54.683  INFO 163 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-07 19:01:54.688  INFO 163 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-01-07 19:01:54.786  INFO 163 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:51756
+2023-01-07 19:01:54.984  INFO 163 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from DSharpPlus.Lavalink
+2023-01-07 20:18:38.592  INFO 163 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.16.Final
+2023-01-07 20:18:38.607  INFO 163 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-01-07 20:18:38.609 ERROR 163 --- [XNIO-1 I/O-1] org.xnio.listener                        : XNIO001007: A channel event listener threw an exception
+
+java.util.concurrent.RejectedExecutionException: XNIO007007: Thread is terminating
+	at org.xnio.nio.WorkerThread.execute(WorkerThread.java:620) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:396) ~[undertow-websockets-jsr-2.2.16.Final.jar!/:2.2.16.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:388) ~[undertow-websockets-jsr-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:1081) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:994) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.terminated(WriteReadyHandler.java:70) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.writeTerminated(NioSocketConduit.java:204) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.terminateWrites(NioSocketConduit.java:193) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.truncateWrites(NioSocketConduit.java:198) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.conduits.IdleTimeoutConduit.truncateWrites(IdleTimeoutConduit.java:387) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.conduits.ConduitStreamSinkChannel.close(ConduitStreamSinkChannel.java:186) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.IoUtils.safeClose(IoUtils.java:152) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.forceTermination(WriteReadyHandler.java:57) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.forceTermination(NioSocketConduit.java:108) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:507) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+
+2023-01-07 20:18:38.612  INFO 163 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2023-01-07 20:21:31.773  INFO 4644 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 16.0.1 on 8e3707eaf1bc with PID 4644 (/home/runner/MiiBot/Lavalink.jar started by runner in /home/runner/MiiBot)
+2023-01-07 20:21:31.790  INFO 4644 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-01-07 20:21:35.136  INFO 4644 --- [main] lavalink.server.Launcher                 : Started Launcher in 5.04 seconds (JVM running for 6.708)
+2023-01-07 20:21:35.142  INFO 4644 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2023-01-07 20:21:35.368  INFO 4644 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.6.2
+	Build time:     08.11.2022 09:02:53 UTC
+	Branch          HEAD
+	Commit:         4782f1f
+	Commit time:    08.11.2022 09:01:14 UTC
+	JVM:            16.0.1
+	Lavaplayer      1.3.99.1-original
+
+2023-01-07 20:21:35.403  INFO 4644 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-01-07 20:21:37.808  WARN 4644 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-01-07 20:21:37.849  INFO 4644 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-01-07 20:21:37.850  INFO 4644 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2424 ms
+2023-01-07 20:21:38.752  INFO 4644 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2023-01-07 20:21:39.657  INFO 4644 --- [main] lavalink.server.config.KoeConfiguration  : OS: LINUX, Arch: X86_64
+2023-01-07 20:21:39.658  INFO 4644 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2023-01-07 20:21:39.668  INFO 4644 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2023-01-07 20:21:39.675  INFO 4644 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2023-01-07 20:21:39.779  WARN 4644 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2023-01-07 20:21:40.681  INFO 4644 --- [main] io.undertow                              : starting server: Undertow - 2.2.16.Final
+2023-01-07 20:21:40.705  INFO 4644 --- [main] org.xnio                                 : XNIO version 3.8.6.Final
+2023-01-07 20:21:40.750  INFO 4644 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.6.Final
+2023-01-07 20:21:40.924  INFO 4644 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2023-01-07 20:21:41.000  INFO 4644 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 235 (http)
+2023-01-07 20:21:41.006  INFO 4644 --- [main] lavalink.server.Launcher                 : Started Launcher in 5.852 seconds (JVM running for 12.578)
+2023-01-07 20:21:41.008  INFO 4644 --- [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2023-01-07 20:21:44.075  INFO 4644 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-07 20:21:44.082  INFO 4644 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-07 20:21:44.092  INFO 4644 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-01-07 20:21:44.180  INFO 4644 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:33648
+2023-01-07 20:21:44.281  INFO 4644 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from DSharpPlus.Lavalink
+2023-01-07 20:30:33.395  INFO 4644 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:33648 -- CloseStatus[code=1006, reason=]
+2023-01-07 20:30:33.396  INFO 4644 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-01-07 20:30:33.406  INFO 4644 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.16.Final
+2023-01-07 20:30:33.412  INFO 4644 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-01-07 20:30:33.419  INFO 4644 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2023-01-07 22:51:34.765  INFO 213 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 16.0.1 on a2278f4eb967 with PID 213 (/home/runner/MiiBot/Lavalink.jar started by runner in /home/runner/MiiBot)
+2023-01-07 22:51:34.773  INFO 213 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-01-07 22:51:36.572  INFO 213 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.845 seconds (JVM running for 4.392)
+2023-01-07 22:51:36.578  INFO 213 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2023-01-07 22:51:36.689  INFO 213 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.6.2
+	Build time:     08.11.2022 09:02:53 UTC
+	Branch          HEAD
+	Commit:         4782f1f
+	Commit time:    08.11.2022 09:01:14 UTC
+	JVM:            16.0.1
+	Lavaplayer      1.3.99.1-original
+
+2023-01-07 22:51:36.699  INFO 213 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-01-07 22:51:37.821  WARN 213 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-01-07 22:51:37.856  INFO 213 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-01-07 22:51:37.856  INFO 213 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1145 ms
+2023-01-07 22:51:38.505  INFO 213 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2023-01-07 22:51:38.761  INFO 213 --- [main] lavalink.server.config.KoeConfiguration  : OS: LINUX, Arch: X86_64
+2023-01-07 22:51:38.761  INFO 213 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2023-01-07 22:51:38.766  INFO 213 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2023-01-07 22:51:38.773  INFO 213 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2023-01-07 22:51:38.817  WARN 213 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2023-01-07 22:51:39.178  INFO 213 --- [main] io.undertow                              : starting server: Undertow - 2.2.16.Final
+2023-01-07 22:51:39.192  INFO 213 --- [main] org.xnio                                 : XNIO version 3.8.6.Final
+2023-01-07 22:51:39.207  INFO 213 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.6.Final
+2023-01-07 22:51:39.327  INFO 213 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2023-01-07 22:51:39.401  INFO 213 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 235 (http)
+2023-01-07 22:51:39.415  INFO 213 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.83 seconds (JVM running for 7.235)
+2023-01-07 22:51:39.417  INFO 213 --- [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2023-01-07 22:51:39.831  INFO 213 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-07 22:51:39.832  INFO 213 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-07 22:51:39.834  INFO 213 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-01-07 22:51:39.854  INFO 213 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:34008
+2023-01-07 22:51:39.917  INFO 213 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from DSharpPlus.Lavalink
+2023-01-07 22:52:01.291  INFO 213 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"sessionId":"f42c4d3ae980da96ef307e85f16aeb61","event":{"token":"17128c10179ad9ce","guild_id":"1041829398904586262","endpoint":"us-east3662.discord.media:443"},"op":"voiceUpdate","guildId":"1041829398904586262"}
+2023-01-07 22:55:24.529  INFO 213 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:reeses puffs mario kart wii"
+2023-01-07 22:55:25.405  INFO 213 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: reeses puffs mario kart wii
+2023-01-07 22:55:27.313  INFO 213 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFIIAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 22:55:27.320  WARN 213 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : YouTube auth tokens can't be retrieved because email and password is not set in YoutubeAudioSourceManager, age restricted videos will throw exceptions.
+2023-01-07 22:55:27.905  INFO 213 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is null).
+2023-01-07 22:55:27.978  INFO 213 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgstSVlVa1dPM2h0byjf8OedBg%3D%3D, next update will be after 600 seconds.
+2023-01-07 22:56:03.300  INFO 213 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "scsearch:World Bowser"
+2023-01-07 22:56:03.303  INFO 213 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.s.SoundCloudClientIdTracker    : Updating SoundCloud client ID (current is null).
+2023-01-07 22:56:03.730  INFO 213 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.s.SoundCloudClientIdTracker    : Updating SoundCloud client ID succeeded, new ID is oUAZOUnuAAgRGSrrP5uGRMadJzmZzjap.
+2023-01-07 22:56:04.222  INFO 213 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: World Bowser
+2023-01-07 22:56:51.484  INFO 213 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 22:56:51.536  INFO 213 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 22:56:51.543  INFO 213 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 22:57:01.987  INFO 213 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"1041829398904586262"}
+2023-01-07 22:57:01.991  INFO 213 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 22:57:02.051  INFO 213 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 22:57:02.058  INFO 213 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAA2QIADFdvcmxkIEJvd3NlcgAIQm93bCBNYW4AAAAAAAOZBQByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDY1ODI3NDMxL2RhN2RjMzU0LWU3OTktNGE2Zi1iOGZiLTYwNzRkNTZiZGMzZC9zdHJlYW0vaGxzAAEALGh0dHBzOi8vc291bmRjbG91ZC5jb20vYm93bC1tYW4vd29ybGQtYm93c2VyAApzb3VuZGNsb3VkAAAAAAAAAAA=","op":"play","guildId":"1041829398904586262"}
+2023-01-07 23:00:58.040  INFO 213 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/bowl-man/world-bowser"
+2023-01-07 23:00:58.239  INFO 213 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track World Bowser
+2023-01-07 23:00:58.245  INFO 213 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 23:02:21.641  INFO 213 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 23:02:21.723  INFO 213 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 23:02:21.729  INFO 213 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAA2QIADFdvcmxkIEJvd3NlcgAIQm93bCBNYW4AAAAAAAOZBQByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDY1ODI3NDMxL2RhN2RjMzU0LWU3OTktNGE2Zi1iOGZiLTYwNzRkNTZiZGMzZC9zdHJlYW0vaGxzAAEALGh0dHBzOi8vc291bmRjbG91ZC5jb20vYm93bC1tYW4vd29ybGQtYm93c2VyAApzb3VuZGNsb3VkAAAAAAAAAAA=","op":"play","guildId":"1041829398904586262"}
+2023-01-07 23:06:17.681  INFO 213 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/bowl-man/world-bowser"
+2023-01-07 23:06:17.877  INFO 213 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track World Bowser
+2023-01-07 23:06:17.883  INFO 213 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 23:06:17.886  INFO 213 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is CgstSVlVa1dPM2h0byjf8OedBg%3D%3D).
+2023-01-07 23:06:17.922  INFO 213 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgtQNzROdDN1TnpJRSjp9eedBg%3D%3D, next update will be after 600 seconds.
+2023-01-07 23:07:41.400  INFO 213 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 23:07:41.470  INFO 213 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 23:07:41.474  INFO 213 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAA2QIADFdvcmxkIEJvd3NlcgAIQm93bCBNYW4AAAAAAAOZBQByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDY1ODI3NDMxL2RhN2RjMzU0LWU3OTktNGE2Zi1iOGZiLTYwNzRkNTZiZGMzZC9zdHJlYW0vaGxzAAEALGh0dHBzOi8vc291bmRjbG91ZC5jb20vYm93bC1tYW4vd29ybGQtYm93c2VyAApzb3VuZGNsb3VkAAAAAAAAAAA=","op":"play","guildId":"1041829398904586262"}
+2023-01-07 23:09:11.066  INFO 213 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:cherry doll colorful port"
+2023-01-07 23:09:11.541  INFO 213 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: cherry doll colorful port
+2023-01-07 23:11:37.187  INFO 213 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/bowl-man/world-bowser"
+2023-01-07 23:11:37.465  INFO 213 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track World Bowser
+2023-01-07 23:11:37.471  INFO 213 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFEOAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 23:13:00.827  INFO 213 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=6f3c-SBeU3k"
+2023-01-07 23:13:00.916  INFO 213 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Mario Kart Wii x Reese's Puffs ( Naz3nt Remix // Full version )
+2023-01-07 23:13:00.920  INFO 213 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAOW9zdSFtYW5pYSB8IENvbG9yZnVsIFNvdW5kcyBQb3J0IC0gQ2hlcnJ5IERvbGwgMS4xIDk4LjY5JQAORGlhbW9uZFBhcmFnb24AAAAAAAHBOAALdC1uaTFLOF9oREUAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj10LW5pMUs4X2hERQAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 23:13:33.539  INFO 213 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.16.Final
+2023-01-07 23:13:33.544  INFO 213 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-01-07 23:13:33.547 ERROR 213 --- [XNIO-1 I/O-1] org.xnio.listener                        : XNIO001007: A channel event listener threw an exception
+
+java.util.concurrent.RejectedExecutionException: XNIO007007: Thread is terminating
+	at org.xnio.nio.WorkerThread.execute(WorkerThread.java:620) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:396) ~[undertow-websockets-jsr-2.2.16.Final.jar!/:2.2.16.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:388) ~[undertow-websockets-jsr-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:1081) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:994) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.terminated(WriteReadyHandler.java:70) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.writeTerminated(NioSocketConduit.java:204) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.terminateWrites(NioSocketConduit.java:193) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.truncateWrites(NioSocketConduit.java:198) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.conduits.IdleTimeoutConduit.truncateWrites(IdleTimeoutConduit.java:387) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.conduits.ConduitStreamSinkChannel.close(ConduitStreamSinkChannel.java:186) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.IoUtils.safeClose(IoUtils.java:152) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.forceTermination(WriteReadyHandler.java:57) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.forceTermination(NioSocketConduit.java:108) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:507) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+
+2023-01-07 23:13:33.548  INFO 213 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2023-01-07 23:13:33.553  WARN 213 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.t.p.LocalAudioTrackExecutor      : Suspicious exception for playback of t-ni1K8_hDE
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: The track was unexpectedly terminated.
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.handlePlaybackInterrupt(LocalAudioTrackExecutor.java:347) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.executeProcessingLoop(LocalAudioTrackExecutor.java:291) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.executeProcessingLoop(LocalAudioTrackExecutor.java:249) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.process(MatroskaAudioTrack.java:38) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.DelegatedAudioTrack.processDelegate(DelegatedAudioTrack.java:25) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.processStatic(YoutubeAudioTrack.java:58) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.process(YoutubeAudioTrack.java:50) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:104) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$executeTrack$1(DefaultAudioPlayerManager.java:354) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager$$Lambda$804/0x00000000c832f240.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.99.1-original
+  os.arch: amd64
+  os.name: Linux
+  os.version: 5.15.0-1025-gcp
+  java.vendor: AdoptOpenJDK
+  java.version: 16.0.1
+  java.runtime.version: 16.0.1+9
+  java.vm.version: openj9-0.26.0
+Caused by: java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ArrayBlockingQueue.put(Unknown Source) ~[na:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.AllocatingAudioFrameBuffer.consume(AllocatingAudioFrameBuffer.java:178) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.common.OpusPacketRouter.passThrough(OpusPacketRouter.java:168) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.common.OpusPacketRouter.process(OpusPacketRouter.java:98) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaOpusTrackConsumer.consume(MatroskaOpusTrackConsumer.java:46) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.processFrameInBlock(MatroskaStreamingFile.java:371) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.parseClusterSimpleBlock(MatroskaStreamingFile.java:335) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.parseNextCluster(MatroskaStreamingFile.java:320) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.provideFrames(MatroskaStreamingFile.java:296) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.lambda$process$0(MatroskaAudioTrack.java:39) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack$$Lambda$807/0x0000000094063008.performRead(Unknown Source) ~[na:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.executeProcessingLoop(LocalAudioTrackExecutor.java:275) ~[lavaplayer-1.3.99.1.jar!/:na]
+	... 11 common frames omitted
+
+2023-01-07 23:14:27.029  INFO 5005 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 16.0.1 on a2278f4eb967 with PID 5005 (/home/runner/MiiBot/Lavalink.jar started by runner in /home/runner/MiiBot)
+2023-01-07 23:14:27.036  INFO 5005 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-01-07 23:14:28.536  INFO 5005 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.487 seconds (JVM running for 3.633)
+2023-01-07 23:14:28.541  INFO 5005 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2023-01-07 23:14:28.626  INFO 5005 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.6.2
+	Build time:     08.11.2022 09:02:53 UTC
+	Branch          HEAD
+	Commit:         4782f1f
+	Commit time:    08.11.2022 09:01:14 UTC
+	JVM:            16.0.1
+	Lavaplayer      1.3.99.1-original
+
+2023-01-07 23:14:28.634  INFO 5005 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-01-07 23:14:30.038  WARN 5005 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-01-07 23:14:30.074  INFO 5005 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-01-07 23:14:30.075  INFO 5005 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1433 ms
+2023-01-07 23:14:30.539  INFO 5005 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2023-01-07 23:14:30.764  INFO 5005 --- [main] lavalink.server.config.KoeConfiguration  : OS: LINUX, Arch: X86_64
+2023-01-07 23:14:30.764  INFO 5005 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2023-01-07 23:14:30.768  INFO 5005 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2023-01-07 23:14:30.775  INFO 5005 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2023-01-07 23:14:30.820  WARN 5005 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2023-01-07 23:14:31.188  INFO 5005 --- [main] io.undertow                              : starting server: Undertow - 2.2.16.Final
+2023-01-07 23:14:31.201  INFO 5005 --- [main] org.xnio                                 : XNIO version 3.8.6.Final
+2023-01-07 23:14:31.214  INFO 5005 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.6.Final
+2023-01-07 23:14:31.314  INFO 5005 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2023-01-07 23:14:31.384  INFO 5005 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 235 (http)
+2023-01-07 23:14:31.399  INFO 5005 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.852 seconds (JVM running for 6.496)
+2023-01-07 23:14:31.400  INFO 5005 --- [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2023-01-07 23:14:32.898  INFO 5005 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-07 23:14:32.899  INFO 5005 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-07 23:14:32.901  INFO 5005 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-01-07 23:14:32.921  INFO 5005 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:34606
+2023-01-07 23:14:32.988  INFO 5005 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from DSharpPlus.Lavalink
+2023-01-07 23:14:42.899  INFO 5005 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"52a06e37c7a4c8acf5b748d921ee6e37","event":{"token":"17128c10179ad9ce","guild_id":"1041829398904586262","endpoint":"us-east3662.discord.media:443"},"op":"voiceUpdate","guildId":"1041829398904586262"}
+2023-01-07 23:14:42.923  INFO 5005 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:mario karet wii reeses puffs"
+2023-01-07 23:14:44.039  INFO 5005 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: mario karet wii reeses puffs
+2023-01-07 23:14:48.066  INFO 5005 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAP01hcmlvIEthcnQgV2lpIHggUmVlc2UncyBQdWZmcyAoIE5hejNudCBSZW1peCAvLyBGdWxsIHZlcnNpb24gKQAIbW9vbml4dmkAAAAAAAFIIAALNmYzYy1TQmVVM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj02ZjNjLVNCZVUzawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 23:14:48.073  WARN 5005 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : YouTube auth tokens can't be retrieved because email and password is not set in YoutubeAudioSourceManager, age restricted videos will throw exceptions.
+2023-01-07 23:14:48.668  INFO 5005 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is null).
+2023-01-07 23:14:48.748  INFO 5005 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgtseXRCZDdTN2NEQSjo-eedBg%3D%3D, next update will be after 600 seconds.
+2023-01-07 23:14:52.410  INFO 5005 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:image material"
+2023-01-07 23:14:52.948  INFO 5005 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: image material
+2023-01-07 23:15:02.118  INFO 5005 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:freedom dive"
+2023-01-07 23:15:02.612  INFO 5005 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: freedom dive
+2023-01-07 23:16:12.240  INFO 5005 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAigIAJlRhdHNoIC0gIklNQUdFIC1NQVRFUklBTC0gKFZlcnNpb24gMCkiAApUcmFuY2U1MzY4AAAAAAAGl4AAC0trZ3AxLWZIbjZZAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9S2tncDEtZkhuNlkAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"1041829398904586262"}
+2023-01-07 23:17:06.692  INFO 5005 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.16.Final
+2023-01-07 23:17:06.703  INFO 5005 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-01-07 23:17:06.712  INFO 5005 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2023-01-07 23:17:06.715 ERROR 5005 --- [undertow-shutdown-0] org.xnio.listener                        : XNIO001007: A channel event listener threw an exception
+
+java.util.concurrent.RejectedExecutionException: XNIO007007: Thread is terminating
+	at org.xnio.nio.WorkerThread.execute(WorkerThread.java:620) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:396) ~[undertow-websockets-jsr-2.2.16.Final.jar!/:2.2.16.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:388) ~[undertow-websockets-jsr-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:1081) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener$2.run(AbstractFramedChannel.java:1040) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$1.run(AbstractFramedChannel.java:144) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-01-07 23:17:06.720  WARN 5005 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.t.p.LocalAudioTrackExecutor      : Suspicious exception for playback of Kkgp1-fHn6Y
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: The track was unexpectedly terminated.
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.handlePlaybackInterrupt(LocalAudioTrackExecutor.java:347) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.executeProcessingLoop(LocalAudioTrackExecutor.java:291) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.executeProcessingLoop(LocalAudioTrackExecutor.java:249) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.process(MatroskaAudioTrack.java:38) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.DelegatedAudioTrack.processDelegate(DelegatedAudioTrack.java:25) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.processStatic(YoutubeAudioTrack.java:58) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.process(YoutubeAudioTrack.java:50) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:104) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$executeTrack$1(DefaultAudioPlayerManager.java:354) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager$$Lambda$805/0x00000000f428dab0.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.99.1-original
+  os.arch: amd64
+  os.name: Linux
+  os.version: 5.15.0-1025-gcp
+  java.vendor: AdoptOpenJDK
+  java.version: 16.0.1
+  java.runtime.version: 16.0.1+9
+  java.vm.version: openj9-0.26.0
+Caused by: java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ArrayBlockingQueue.put(Unknown Source) ~[na:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.AllocatingAudioFrameBuffer.consume(AllocatingAudioFrameBuffer.java:178) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.common.OpusPacketRouter.passThrough(OpusPacketRouter.java:168) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.common.OpusPacketRouter.process(OpusPacketRouter.java:98) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaOpusTrackConsumer.consume(MatroskaOpusTrackConsumer.java:46) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.processFrameInBlock(MatroskaStreamingFile.java:371) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.parseClusterSimpleBlock(MatroskaStreamingFile.java:335) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.parseNextCluster(MatroskaStreamingFile.java:320) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.provideFrames(MatroskaStreamingFile.java:296) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.lambda$process$0(MatroskaAudioTrack.java:39) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack$$Lambda$808/0x00000000bc06e7a8.performRead(Unknown Source) ~[na:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.executeProcessingLoop(LocalAudioTrackExecutor.java:275) ~[lavaplayer-1.3.99.1.jar!/:na]
+	... 11 common frames omitted
+
+2023-01-07 23:17:15.213  INFO 5733 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 16.0.1 on a2278f4eb967 with PID 5733 (/home/runner/MiiBot/Lavalink.jar started by runner in /home/runner/MiiBot)
+2023-01-07 23:17:15.220  INFO 5733 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-01-07 23:17:16.738  INFO 5733 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.432 seconds (JVM running for 3.601)
+2023-01-07 23:17:16.743  INFO 5733 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2023-01-07 23:17:16.832  INFO 5733 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.6.2
+	Build time:     08.11.2022 09:02:53 UTC
+	Branch          HEAD
+	Commit:         4782f1f
+	Commit time:    08.11.2022 09:01:14 UTC
+	JVM:            16.0.1
+	Lavaplayer      1.3.99.1-original
+
+2023-01-07 23:17:16.840  INFO 5733 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-01-07 23:17:17.883  WARN 5733 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-01-07 23:17:17.910  INFO 5733 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-01-07 23:17:17.911  INFO 5733 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1060 ms
+2023-01-07 23:17:18.356  INFO 5733 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2023-01-07 23:17:18.586  INFO 5733 --- [main] lavalink.server.config.KoeConfiguration  : OS: LINUX, Arch: X86_64
+2023-01-07 23:17:18.587  INFO 5733 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2023-01-07 23:17:18.591  INFO 5733 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2023-01-07 23:17:18.598  INFO 5733 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2023-01-07 23:17:18.639  WARN 5733 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2023-01-07 23:17:18.961  INFO 5733 --- [main] io.undertow                              : starting server: Undertow - 2.2.16.Final
+2023-01-07 23:17:18.973  INFO 5733 --- [main] org.xnio                                 : XNIO version 3.8.6.Final
+2023-01-07 23:17:18.986  INFO 5733 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.6.Final
+2023-01-07 23:17:19.072  INFO 5733 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2023-01-07 23:17:19.140  INFO 5733 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 235 (http)
+2023-01-07 23:17:19.147  INFO 5733 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.397 seconds (JVM running for 6.01)
+2023-01-07 23:17:19.148  INFO 5733 --- [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2023-01-07 23:17:21.121  INFO 5733 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-07 23:17:21.122  INFO 5733 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-07 23:17:21.124  INFO 5733 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-07 23:17:21.144  INFO 5733 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37688
+2023-01-07 23:17:21.204  INFO 5733 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from DSharpPlus.Lavalink
+2023-01-07 23:18:27.634  INFO 5733 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37688 -- CloseStatus[code=1006, reason=]
+2023-01-07 23:18:27.635  INFO 5733 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-01-07 23:18:27.648  INFO 5733 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.16.Final
+2023-01-07 23:18:27.652  INFO 5733 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-01-07 23:18:27.656  INFO 5733 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2023-01-07 23:18:35.970  INFO 6144 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 16.0.1 on a2278f4eb967 with PID 6144 (/home/runner/MiiBot/Lavalink.jar started by runner in /home/runner/MiiBot)
+2023-01-07 23:18:35.976  INFO 6144 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-01-07 23:18:37.554  INFO 6144 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.479 seconds (JVM running for 3.62)
+2023-01-07 23:18:37.559  INFO 6144 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2023-01-07 23:18:37.666  INFO 6144 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.6.2
+	Build time:     08.11.2022 09:02:53 UTC
+	Branch          HEAD
+	Commit:         4782f1f
+	Commit time:    08.11.2022 09:01:14 UTC
+	JVM:            16.0.1
+	Lavaplayer      1.3.99.1-original
+
+2023-01-07 23:18:37.675  INFO 6144 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-01-07 23:18:38.801  WARN 6144 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-01-07 23:18:38.835  INFO 6144 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-01-07 23:18:38.835  INFO 6144 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1146 ms
+2023-01-07 23:18:39.289  INFO 6144 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2023-01-07 23:18:39.507  INFO 6144 --- [main] lavalink.server.config.KoeConfiguration  : OS: LINUX, Arch: X86_64
+2023-01-07 23:18:39.507  INFO 6144 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2023-01-07 23:18:39.512  INFO 6144 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2023-01-07 23:18:39.518  INFO 6144 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2023-01-07 23:18:39.554  WARN 6144 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2023-01-07 23:18:39.907  INFO 6144 --- [main] io.undertow                              : starting server: Undertow - 2.2.16.Final
+2023-01-07 23:18:39.923  INFO 6144 --- [main] org.xnio                                 : XNIO version 3.8.6.Final
+2023-01-07 23:18:39.937  INFO 6144 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.6.Final
+2023-01-07 23:18:40.029  INFO 6144 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2023-01-07 23:18:40.085  INFO 6144 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 235 (http)
+2023-01-07 23:18:40.090  INFO 6144 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.525 seconds (JVM running for 6.156)
+2023-01-07 23:18:40.091  INFO 6144 --- [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2023-01-07 23:18:41.917  INFO 6144 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-07 23:18:41.918  INFO 6144 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-07 23:18:41.920  INFO 6144 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-01-07 23:18:41.944  INFO 6144 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:58064
+2023-01-07 23:18:42.005  INFO 6144 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from DSharpPlus.Lavalink
+2023-01-07 23:19:01.418  INFO 6144 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"46c17712023be46c905046c3a69d7558","event":{"token":"ccfcf586055f5f65","guild_id":"1041829398904586262","endpoint":"us-east3662.discord.media:443"},"op":"voiceUpdate","guildId":"1041829398904586262"}
+2023-01-07 23:19:01.463  INFO 6144 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Freedom Dive"
+2023-01-07 23:19:02.679  INFO 6144 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Freedom Dive
+2023-01-07 23:19:04.853  INFO 6144 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAdAIAFVhJIC0gRnJlZWRvbSBEaXZlIOKGkwAFUmF1ZGkAAAAAAAQPEAALT0kzQzlxUWxiMVUAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PSTNDOXFRbGIxVQAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"1041829398904586262"}
+2023-01-07 23:19:04.861  WARN 6144 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : YouTube auth tokens can't be retrieved because email and password is not set in YoutubeAudioSourceManager, age restricted videos will throw exceptions.
+2023-01-07 23:19:05.426  INFO 6144 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is null).
+2023-01-07 23:19:05.479  INFO 6144 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgswX3pnTS1mUUYxQSjp--edBg%3D%3D, next update will be after 600 seconds.
+2023-01-07 23:19:17.171  INFO 6144 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Image Material"
+2023-01-07 23:19:17.676  INFO 6144 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Image Material
+2023-01-07 23:23:31.441  INFO 6144 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAigIAJlRhdHNoIC0gIklNQUdFIC1NQVRFUklBTC0gKFZlcnNpb24gMCkiAApUcmFuY2U1MzY4AAAAAAAGl4AAC0trZ3AxLWZIbjZZAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9S2tncDEtZkhuNlkAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"1041829398904586262"}
+2023-01-07 23:25:55.383  INFO 6144 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.16.Final
+2023-01-07 23:25:55.387  INFO 6144 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-01-07 23:25:55.391  INFO 6144 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2023-01-07 23:25:55.392 ERROR 6144 --- [XNIO-1 I/O-2] org.xnio.listener                        : XNIO001007: A channel event listener threw an exception
+
+java.util.concurrent.RejectedExecutionException: XNIO007007: Thread is terminating
+	at org.xnio.nio.WorkerThread.execute(WorkerThread.java:620) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:396) ~[undertow-websockets-jsr-2.2.16.Final.jar!/:2.2.16.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:388) ~[undertow-websockets-jsr-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:1081) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:994) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.terminated(WriteReadyHandler.java:70) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.writeTerminated(NioSocketConduit.java:204) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.terminateWrites(NioSocketConduit.java:193) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.truncateWrites(NioSocketConduit.java:198) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.conduits.IdleTimeoutConduit.truncateWrites(IdleTimeoutConduit.java:387) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.conduits.ConduitStreamSinkChannel.close(ConduitStreamSinkChannel.java:186) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.IoUtils.safeClose(IoUtils.java:152) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.forceTermination(WriteReadyHandler.java:57) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.forceTermination(NioSocketConduit.java:108) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:507) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+
+2023-01-07 23:25:55.396  WARN 6144 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.t.p.LocalAudioTrackExecutor      : Suspicious exception for playback of Kkgp1-fHn6Y
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: The track was unexpectedly terminated.
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.handlePlaybackInterrupt(LocalAudioTrackExecutor.java:347) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.executeProcessingLoop(LocalAudioTrackExecutor.java:291) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.executeProcessingLoop(LocalAudioTrackExecutor.java:249) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.process(MatroskaAudioTrack.java:38) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.DelegatedAudioTrack.processDelegate(DelegatedAudioTrack.java:25) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.processStatic(YoutubeAudioTrack.java:58) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.process(YoutubeAudioTrack.java:50) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:104) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$executeTrack$1(DefaultAudioPlayerManager.java:354) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager$$Lambda$806/0x000000001436d5e0.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.99.1-original
+  os.arch: amd64
+  os.name: Linux
+  os.version: 5.15.0-1025-gcp
+  java.vendor: AdoptOpenJDK
+  java.version: 16.0.1
+  java.runtime.version: 16.0.1+9
+  java.vm.version: openj9-0.26.0
+Caused by: java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ArrayBlockingQueue.put(Unknown Source) ~[na:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.AllocatingAudioFrameBuffer.consume(AllocatingAudioFrameBuffer.java:178) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.common.OpusPacketRouter.passThrough(OpusPacketRouter.java:168) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.common.OpusPacketRouter.process(OpusPacketRouter.java:98) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaOpusTrackConsumer.consume(MatroskaOpusTrackConsumer.java:46) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.processFrameInBlock(MatroskaStreamingFile.java:371) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.parseClusterSimpleBlock(MatroskaStreamingFile.java:335) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.parseNextCluster(MatroskaStreamingFile.java:320) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.provideFrames(MatroskaStreamingFile.java:296) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.lambda$process$0(MatroskaAudioTrack.java:39) ~[lavaplayer-1.3.99.1.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack$$Lambda$809/0x00000000e405ef08.performRead(Unknown Source) ~[na:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.executeProcessingLoop(LocalAudioTrackExecutor.java:275) ~[lavaplayer-1.3.99.1.jar!/:na]
+	... 11 common frames omitted
+
