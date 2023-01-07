@@ -15,6 +15,7 @@ class Program
     // Add the server IDs that use MiiBot here
     private readonly static ulong[] whitelistedGuilds = {
         1041829398904586262, // Bot Testing
+        1042904993382027315 // Badge Server
     };
 
     // Lavalink server process
