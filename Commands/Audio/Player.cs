@@ -17,7 +17,7 @@ namespace MiiBot
         // Lavalink States for each guild 
         public static Dictionary<ulong, Dictionary<string, bool>> lavalinkStates = new Dictionary<ulong, Dictionary<string, bool>>();
 
-        public async Task<Tuple<LavalinkExtension, LavalinkNodeConnection, LavalinkGuildConnection>> GetVoiceConnection(InteractionContext ctx)
+        public static async Task<Tuple<LavalinkExtension, LavalinkNodeConnection, LavalinkGuildConnection>> GetVoiceConnection(InteractionContext ctx)
         {
             // Get the voice connection object
             var lava = ctx.Client.GetLavalink();
@@ -396,7 +396,7 @@ namespace MiiBot
 
         
         [SlashCommand("current", "Display the currently playing song")]
-        public async Task NowPlaying(InteractionContext ctx,
+        public async Task Current(InteractionContext ctx,
             [Option("Hidden","Hide message from other users")] bool isHidden = false
         )
         {

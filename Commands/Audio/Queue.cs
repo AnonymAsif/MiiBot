@@ -62,7 +62,7 @@ namespace MiiBot
         
         
         [SlashCommand("list", "List the tracks in the queue")]
-        public async Task ListQueue(InteractionContext ctx)
+        public async Task List(InteractionContext ctx)
         {   
             // If the queue is empty
             if (trackQueues[ctx.Guild.Id].Count() == 0)
@@ -113,7 +113,7 @@ namespace MiiBot
 
         
         [SlashCommand("play", "Play a song from the queue using its index")]
-        public async Task PlayIndex(InteractionContext ctx,
+        public async Task Play(InteractionContext ctx,
             [Option("Index", "Item index", true)] long? itemIndex = null
         )
         {   
@@ -131,10 +131,7 @@ namespace MiiBot
                 return;
             }
             
-            // Get the voice connection object
-            var lava = ctx.Client.GetLavalink();
-            var node = lava.ConnectedNodes.Values.First();
-            var voiceConnection = node.GetGuildConnection(ctx.Guild);
+            (var lava, var node, var voiceConnection) = await Player.GetVoiceConnection(ctx);
 
             // Checks for valid voice connection
             if (!await Validation.CheckConnection(ctx, voiceConnection, "Play")) return;
@@ -165,7 +162,7 @@ namespace MiiBot
 
 
         [SlashCommand("move", "Move a song from the queue using its index to another index")]
-        public async Task MoveIndex(InteractionContext ctx,
+        public async Task Move(InteractionContext ctx,
             [Option("SongIndex", "The item's current index", true)] long? itemStartIndex = null,
             [Option("NewIndex", "The item's new index")] long? itemEndIndex = null
         )
@@ -224,7 +221,7 @@ namespace MiiBot
 
 
         [SlashCommand("remove", "Remove a song from the queue using its index")]
-        public async Task RemoveIndex(InteractionContext ctx,
+        public async Task Remove(InteractionContext ctx,
             [Option("StartIndex", "Item start index", true)] long? itemStartIndex = null,
             [Option("EndIndex", "Item end index")] long? itemEndIndex = null
         )
@@ -290,7 +287,7 @@ namespace MiiBot
 
 
         [SlashCommand("save", "Save the current queue to be used later")]
-        public async Task SaveQueue(InteractionContext ctx,
+        public async Task Save(InteractionContext ctx,
             [Option("SaveCurrentSong", "Save the currently playing song as well")] bool saveCurrent = true,
             [Option("QueueName", "Name your queue", true)] string queueName = null
         )
@@ -321,9 +318,7 @@ namespace MiiBot
             }
 
             // Get the voice connection object
-            var lava = ctx.Client.GetLavalink();
-            var node = lava.ConnectedNodes.Values.First();
-            var voiceConnection = node.GetGuildConnection(ctx.Guild);
+            (var lava, var node, var voiceConnection) = await Player.GetVoiceConnection(ctx);
 
             // Outer Dictionary - Maps guild ID : Dictionary of guild saved queues
             // Inner Dictionary - Maps queuename : List of Uris
@@ -427,7 +422,7 @@ namespace MiiBot
         
 
         [SlashCommand("load", "Load a saved queue and play it")]
-        public async Task LoadQueue(InteractionContext ctx, 
+        public async Task Load(InteractionContext ctx, 
             [Option("QueueName", "Select queue", true)] string queueName = null,
             [Option("Overwrite", "Overwrite current queue")] bool overwriteQueue = false
         )
@@ -443,9 +438,7 @@ namespace MiiBot
             }
 
             // Get the voice connection object
-            var lava = ctx.Client.GetLavalink();
-            var node = lava.ConnectedNodes.Values.First();
-            var voiceConnection = node.GetGuildConnection(ctx.Guild);
+            (var lava, var node, var voiceConnection) = await Player.GetVoiceConnection(ctx);
 
             // Checks for valid voiceConnection
             if (voiceConnection == null) 
@@ -554,7 +547,7 @@ namespace MiiBot
 
         
         [SlashCommand("remove", "Remove a saved queue from the database")]
-        public async Task RemoveQueue(InteractionContext ctx, 
+        public async Task Remove(InteractionContext ctx, 
             [Option("QueueName", "Select queue", true)] string queueName = null
         )
         {
@@ -605,6 +598,44 @@ namespace MiiBot
             }
             
             await Embeds.EditEmbed(ctx, "Queue Removed", "Your selected queue has been removed from the database", DiscordColor.Green);
+        }
+
+        [SlashCommand("view", "View the saved queues in the database")]
+        public async Task View(InteractionContext ctx)
+        {
+            // Defers response
+            await ctx.DeferAsync();
+            (var lava, var node, var voiceConnection) = await Player.GetVoiceConnection(ctx);
+
+            string description = "";
+
+            // Outer Dictionary - Maps guild ID : Dictionary of guild saved queues
+            // Inner Dictionary - Maps queuename : List of Uris
+            Dictionary<ulong, Dictionary<string, List<string>>> queueDictionary = await Database.ReadDB();
+
+            // Read Operation Failed
+            if (queueDictionary.Count() == 0)
+            {
+                await Embeds.EditEmbed(ctx, "Unable to Access Database", "MiiBot is having trouble getting the queues", DiscordColor.Red);
+                return;
+            }
+            
+            foreach (KeyValuePair<string, List<string>> queueName in queueDictionary[ctx.Guild.Id])
+            {
+                TimeSpan length = new TimeSpan();
+                foreach (string url in queueName.Value)
+                {
+                    TimeSpan trackLength = (await voiceConnection.GetTracksAsync(new Uri(url))).Tracks.First().Length;
+                    length += trackLength;
+                }
+                string queueLength;
+                if (length.Hours > 0) queueLength = length.ToString(@"hh\:mm\:ss");
+                else queueLength = length.ToString(@"mm\:ss");
+                
+                description += $"`[{queueName.Key}]` : {queueName.Value.Count()} `[{queueLength}]`\n";                
+            }
+            
+            await Embeds.EditEmbed(ctx, "Saved Queues", description, DiscordColor.Azure);
         }
     }
 }
