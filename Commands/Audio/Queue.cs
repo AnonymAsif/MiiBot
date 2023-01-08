@@ -546,8 +546,8 @@ namespace MiiBot
         }
 
         
-        [SlashCommand("remove", "Remove a saved queue from the database")]
-        public async Task Remove(InteractionContext ctx, 
+        [SlashCommand("delete", "Delete a saved queue from the database")]
+        public async Task Delete(InteractionContext ctx, 
             [Option("QueueName", "Select queue", true)] string queueName = null
         )
         {
@@ -593,11 +593,11 @@ namespace MiiBot
 
             if (!result)
             {
-                await Embeds.EditEmbed(ctx, "Unable to Access Database", "MiiBot could not save your queue to the database", DiscordColor.Red);
+                await Embeds.EditEmbed(ctx, "Unable to Access Database", "MiiBot could not delete your queue from the database", DiscordColor.Red);
                 return;
             }
             
-            await Embeds.EditEmbed(ctx, "Queue Removed", "Your selected queue has been removed from the database", DiscordColor.Green);
+            await Embeds.EditEmbed(ctx, "Queue Deleted", "Your selected queue has been deleted from the database", DiscordColor.Green);
         }
 
         [SlashCommand("view", "View the saved queues in the database")]
