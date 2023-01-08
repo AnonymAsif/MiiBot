@@ -56,12 +56,15 @@ class Program
             Timeout = TimeSpan.FromSeconds(60)
         });
 
-        // Register slash commands from the following classes
+        // Register slash commands from the following classes (Guilds)
         for (int i = 0; i < whitelistedGuilds.Count(); i++)
         {
             slashCommands.RegisterCommands<MiiBot.Player>(whitelistedGuilds[i]);
             slashCommands.RegisterCommands<MiiBot.Queue>(whitelistedGuilds[i]);
         }
+
+        // Register slash commands from the following classes (Global)
+        slashCommands.RegisterCommands<MiiBot.Info>();
         
         // Set MiiBot's status
         DiscordActivity activity = new DiscordActivity("Wii Music", ActivityType.Playing);

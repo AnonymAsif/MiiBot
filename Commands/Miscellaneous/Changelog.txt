@@ -1,0 +1,9 @@
+**v0.1**
+`Official MiiBot Release`
+
+MiiBot is built using *Slash Commands*.
+
+For starters, MiiBot has [documentation](url) to help get you started!
+The documentation explains how to use MiiBot in detail.
+
+*Note: MiiBot's volume is a bit loud, so make sure to lower it down to about 50%!*
