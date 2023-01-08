@@ -8,12 +8,15 @@ namespace MiiBot
 {
     public class Database
     {
+
+        private static string queueDB = "Database/Queues.json";
+        
         public static async Task<bool> WriteDB(Dictionary<ulong, Dictionary<string, List<string>>> queueDictionary)
         {
             try
             {
                 // Create a file if it doesn't exist, or overwrite if it does
-                FileStream fileStream = new FileStream("Database/Database.json", FileMode.Create);
+                FileStream fileStream = new FileStream(queueDB, FileMode.Create);
                 using (StreamWriter writer = new StreamWriter (fileStream))
                 {
                     // Convert the 'queueDictionary' object to json text
@@ -37,7 +40,7 @@ namespace MiiBot
             
             try
             {
-                FileStream fileStream = new FileStream("Database/Database.json", FileMode.Open);
+                FileStream fileStream = new FileStream(queueDB, FileMode.Open);
                 using (StreamReader reader = new StreamReader (fileStream))
                 {
                     // Get the text as a string from the file
