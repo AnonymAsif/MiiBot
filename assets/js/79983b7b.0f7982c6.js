@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[4104],{4036:e=>{e.exports=JSON.parse('{"label":"MiiBot","permalink":"/blog/tags/mii-bot","allTagsPath":"/blog/tags","count":1}')}}]);

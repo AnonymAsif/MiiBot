@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Welcome to MiiDocs Blog</title>
+        <link>https://your-docusaurus-test-site.com/blog</link>
+        <description>Welcome to MiiDocs Blog</description>
+        <lastBuildDate>Sun, 08 Jan 2023 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Introducing MiiBot]]></title>
+            <link>https://your-docusaurus-test-site.com/blog/released-v0-1</link>
+            <guid>released-v0-1</guid>
+            <pubDate>Sun, 08 Jan 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[MiiBot v0.1 releases today!]]></description>
+            <content:encoded><![CDATA[<p>MiiBot v0.1 releases today!</p><p>If you're on one of the few servers that has the privilige of inviting MiiBot, you might be curious as to who he is. Don't worry - he's very friendly! He just doesn't have any friends...</p><p>MiiBot is a Discord Audio Bot written in C#, harnessing the power of slash commands for user interactions. It uses the <a href="https://github.com/DSharpPlus/DSharpPlus" target="_blank" rel="noopener noreferrer">DSharpPlus wrapper</a> for the <a href="https://discord.com/developers/docs/intro" target="_blank" rel="noopener noreferrer">Discord API</a>, along with the <a href="https://github.com/DSharpPlus/DSharpPlus/tree/master/DSharpPlus.Lavalink" target="_blank" rel="noopener noreferrer">Lavalink API</a> for audio playback.</p><p>Getting started is easy! Once MiiBot is on your server, you can already start to play your favourite songs. </p><p>Not sure where to begin? View the official <a href="/docs/intro">MiiDocs</a>!</p>]]></content:encoded>
+            <category>MiiBot</category>
+            <category>First Release</category>
+            <category>v0.1</category>
+        </item>
+    </channel>
+</rss>
