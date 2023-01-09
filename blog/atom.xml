@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://your-docusaurus-test-site.com/blog</id>
+    <id>https://your-docusaurus-test-site.com/MiiBot/blog</id>
     <title>Welcome to MiiDocs Blog</title>
     <updated>2023-01-08T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://your-docusaurus-test-site.com/blog"/>
+    <link rel="alternate" href="https://your-docusaurus-test-site.com/MiiBot/blog"/>
     <subtitle>Welcome to MiiDocs Blog</subtitle>
-    <icon>https://your-docusaurus-test-site.com/img/favicon.ico</icon>
+    <icon>https://your-docusaurus-test-site.com/MiiBot/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Introducing MiiBot]]></title>
         <id>released-v0-1</id>
-        <link href="https://your-docusaurus-test-site.com/blog/released-v0-1"/>
+        <link href="https://your-docusaurus-test-site.com/MiiBot/blog/released-v0-1"/>
         <updated>2023-01-08T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[MiiBot v0.1 releases today!]]></summary>
-        <content type="html"><![CDATA[<p>MiiBot v0.1 releases today!</p><p>If you're on one of the few servers that has the privilige of inviting MiiBot, you might be curious as to who he is. Don't worry - he's very friendly! He just doesn't have any friends...</p><p>MiiBot is a Discord Audio Bot written in C#, harnessing the power of slash commands for user interactions. It uses the <a href="https://github.com/DSharpPlus/DSharpPlus" target="_blank" rel="noopener noreferrer">DSharpPlus wrapper</a> for the <a href="https://discord.com/developers/docs/intro" target="_blank" rel="noopener noreferrer">Discord API</a>, along with the <a href="https://github.com/DSharpPlus/DSharpPlus/tree/master/DSharpPlus.Lavalink" target="_blank" rel="noopener noreferrer">Lavalink API</a> for audio playback.</p><p>Getting started is easy! Once MiiBot is on your server, you can already start to play your favourite songs. </p><p>Not sure where to begin? View the official <a href="/docs/intro">MiiDocs</a>!</p>]]></content>
+        <content type="html"><![CDATA[<p>MiiBot v0.1 releases today!</p><p>If you're on one of the few servers that has the privilige of inviting MiiBot, you might be curious as to who he is. Don't worry - he's very friendly! He just doesn't have any friends...</p><p>MiiBot is a Discord Audio Bot written in C#, harnessing the power of slash commands for user interactions. It uses the <a href="https://github.com/DSharpPlus/DSharpPlus" target="_blank" rel="noopener noreferrer">DSharpPlus wrapper</a> for the <a href="https://discord.com/developers/docs/intro" target="_blank" rel="noopener noreferrer">Discord API</a>, along with the <a href="https://github.com/DSharpPlus/DSharpPlus/tree/master/DSharpPlus.Lavalink" target="_blank" rel="noopener noreferrer">Lavalink API</a> for audio playback.</p><p>Getting started is easy! Once MiiBot is on your server, you can already start to play your favourite songs. </p><p>Not sure where to begin? View the official <a href="/MiiBot/docs/intro">MiiDocs</a>!</p>]]></content>
         <author>
             <name>AnonymAsif</name>
             <uri>https://github.com/arahm1</uri>
