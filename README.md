@@ -1,7 +1,7 @@
 
 <br/>
 <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/1041829399361757267/1060745767360401418/MiiBot.png" width="15%" height="15%">
+  <img src="MiiBot.png" width="15%" height="15%">
   <h3 align="center">MiiBot</h3>
 
   <p align="center">
@@ -28,7 +28,7 @@ MiiBot still isn't sure how far he is in his exploration journey.
 
 <h4>Always Awake</h4>
 
-MiiBot doesn't have the time sleep. He is too curious. <br>
+MiiBot doesn't have the time to sleep. He is too curious. <br>
 Rest assured that you can always count on MiiBot being ready to play Wii Music!
 
 <h4>Multi-Instrumentalist</h4>
@@ -48,5 +48,5 @@ MiiBot doesn't need supervision. <br> He's fine by himself.
 
 ## Mii Makers
 
-* [arahm1](https://github.com/arahm1)
+* [AnonymAsif](https://github.com/AnonymAsif)
 * [Byte](https://github.com/RenderingByte/)
