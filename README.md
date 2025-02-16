@@ -49,4 +49,4 @@ MiiBot doesn't need supervision. <br> He's fine by himself.
 ## Mii Makers
 
 * [AnonymAsif](https://github.com/AnonymAsif)
-* [Byte](https://github.com/RenderingByte/)
+* [AkashbirSingh](https://github.com/AkashbirSingh)
